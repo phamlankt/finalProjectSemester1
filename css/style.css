@@ -1,0 +1,128 @@
+body {
+  background: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: Open Sans;
+}
+html {
+  height: 100%;
+}
+#header1 {
+  display: flex;
+  position: absolute;
+}
+#header1 .menu_wrapper {
+  margin: 20px;
+  margin-left: 14px;
+  margin-right: 15%;
+}
+#header1 .menu_wrapper div {
+  width: 25px;
+  height: 3px;
+  background-color: red;
+  margin: 5px;
+}
+#header1 .header_logo {
+  margin-top: 15px;
+  margin-left: 250px;
+}
+#menu_bar_nav {
+  flex: 1;
+  height: 100%;
+  display: none;
+}
+#menu_bar_nav .menu_bar {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  width: 240px;
+}
+#menu_bar_nav .menu_bar .menu_logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#menu_bar_nav .menu_bar .menu_items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 30px;
+}
+#menu_bar_nav .menu_bar .menu_items div {
+  margin: 0px;
+}
+#menu_bar_nav .menu_bar .menu_items div a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600px;
+  padding: 0 25px;
+  font-family: Open Sans;
+  font-size: 13px;
+  font-weight: 700;
+}
+#menu_bar_nav .menu_bar .menu_items div a span {
+  padding-left: 0px;
+  padding-right: 25px;
+  color: white;
+}
+.footer {
+  position: relative;
+  width: 100%;
+}
+.footer .footer_wrapper {
+  position: fixed;
+  bottom: 2%;
+  display: flex;
+  width: 100%;
+}
+.footer .footer_wrapper .footer_menu {
+  margin: 20px;
+  margin-left: 14px;
+  margin-right: 15%;
+}
+.footer .footer_wrapper .footer_menu div {
+  width: 25px;
+  height: 3px;
+  background-color: green;
+  margin: 5px;
+}
+.footer .footer_wrapper #social-icons {
+  margin-top: 15px;
+  margin-left: 250px;
+}
+.footer .footer_wrapper #social-icons ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.footer .footer_wrapper #social-icons ul li {
+  display: inline-block;
+}
+.footer .footer_wrapper #social-icons ul li a {
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer .footer_wrapper #social-icons ul li a i {
+  font-style: normal;
+  font-weight: normal;
+  opacity: 1;
+  display: block;
+  font-variant: normal;
+  font-size: 13px;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 27px;
+  text-transform: none;
+}
