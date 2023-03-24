@@ -71,6 +71,70 @@ html {
   padding-right: 25px;
   color: white;
 }
+main {
+  position: relative;
+  top: 40%;
+  width: 40%;
+  left: 10%;
+}
+main #main_content {
+  position: relative;
+}
+main #main_content section {
+  width: 60%;
+  font-family: Open Sans;
+  font-weight: 200;
+  font-size: 15px;
+  color: white;
+  display: none;
+}
+main #main_content section p {
+  line-height: 26px;
+}
+main #main_content section h2 {
+  font-size: 50px;
+  font-weight: normal;
+  font-family: 'walkway_semiboldregular';
+  margin-bottom: 30px;
+}
+main #main_content section .btn:hover {
+  background-color: white;
+  color: black;
+}
+main #main_content section button {
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+  width: 140px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+main #main_content section button span {
+  margin-right: 10px;
+}
+main .phone_wrap {
+  position: relative;
+  right: 100px;
+}
+main .phone_wrap #hand_phone {
+  position: fixed;
+  top: 20%;
+  right: 15%;
+  left: auto;
+}
+main .phone_wrap #phone_content {
+  position: fixed;
+  top: 20%;
+  right: 15%;
+  left: auto;
+  margin-top: 75px;
+  margin-right: 90px;
+}
+main .phone_wrap #phone_content img {
+  display: none;
+}
 #footer {
   display: flex;
   position: absolute;

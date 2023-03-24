@@ -88,6 +88,94 @@ html {
     }
 }
 
+main {
+    position: relative;
+    top: 40%;
+    width: 40%;
+    left: 10%;
+
+    #main_content {
+        position: relative;
+
+        section {
+            width: 60%;
+            font-family: Open Sans;
+            font-weight: 200;
+            font-size: 15px;
+            color: white;
+            display: none;
+
+            p {
+                line-height: 26px;
+            }
+
+            h2 {
+                font-size: 50px;
+                font-weight: normal;
+                font-family: 'walkway_semiboldregular';
+                margin-bottom: 30px;
+            }
+
+            .btn:hover {
+                background-color: white;
+                color: black;
+            }
+
+            button {
+                background-color: red;
+                border-radius: 4px;
+                color: white;
+                width: 140px;
+                height: 30px;
+                border: none;
+                font-weight: bold;
+                margin-top: 20px;
+
+
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .phone_wrap {
+        // width: 70%;
+        position: relative;
+        // top: 50%;
+        right: 100px;
+        // margin-left: auto;
+        // margin-right: auto;
+        // box-sizing: border-box;
+
+        // @media (max-width: 1400px) {
+        #hand_phone {
+            // width: 60%;
+            position: fixed;
+            top: 20%;
+            right: 15%;
+            left: auto;
+            // }
+        }
+
+        #phone_content {
+            // width: 60%;
+            position: fixed;
+            top: 20%;
+            right: 15%;
+            left: auto;
+            margin-top: 75px;
+            margin-right: 90px;
+
+            img {
+                // display: block;F
+                display: none;
+            }
+        }
+    }
+}
+
+
 #footer {
     display: flex;
     position: absolute;
@@ -96,7 +184,6 @@ html {
         position: fixed;
         bottom: 2%;
         display: flex;
-        // width: 100%;
 
         .footer_menu {
             margin: 20px;
