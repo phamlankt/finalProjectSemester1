@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/fontawaresome/css/all.css">
     <link rel="stylesheet" href="css/fontawaresome/css/fontawesome.css">
     <link rel="stylesheet" href="css/font/flaticon.css">
-    <script src="scripts/app.js"></script>
+
 </head>
 
 <body>
@@ -60,21 +60,42 @@
     </nav>
 
     <main>
+        <ul id="section_dot">
+            <li class="item home active" id="item_home">Home</li>
+            <li class="item features" id="item_features">Features<span></span></li>
+            <li class="item about" id="item_about"></li>
+            <li class="item video" id="item_video"></li>
+            <li class="item feedback" id="item_feedback"></li>
+            <li class="item screenshots" id="item_screenshots"></li>
+            <li class="item pricing" id="item_pricing"></li>
+            <li class="item download" id="item_download"></li>
+            <li class="item contact" id="item_contact"></li>
+        </ul>
         <div id="main_content">
-            <section id="home_ctn" style="display: block;">
+            <section class="home active" id="home_ctn">
                 <h2>Creat your app page with Appsperia</h2>
                 <p>A better way to present your app using fully featured appsperia template. <br>
                     Now available on the App Store and Play Store!
                 </p>
-                <button class="btn"><span class="icon flaticon-download7"></span>Download App</button>
+                <button class="btn" id="download_btn"><span class="icon flaticon-download7"></span>Download App</button>
             </section>
-            <section id="features_ctn"></section>
-            <section id="about_ctn"></section>
-            <section id="video_ctn"></section>
-            <section id="feedback_ctn"></section>
-            <section id="screenshots_ctn"></section>
-            <section id="pricing_ctn"></section>
-            <section id="download_ctn">
+            <section class="features" id="features_ctn">
+                <p>Features</p>
+            </section>
+            <section class="about" id="about_ctn">
+                <p>About</p>
+            </section>
+            <section class="video" id="video_ctn">
+                <p>Video</p>
+            </section>
+            <section class="feedback" id="feedback_ctn">
+                <p>Feedback</p>
+            </section>
+            <section class="screenshots" id="screenshots_ctn">
+                <p>Screenshots</p>
+            </section>
+            <section id="pricing_ctn">Pricing</section>
+            <section class="download" id="download_ctn">
                 <h2><b>Download</b> the app</h2>
                 <p>A better way to present your app using fully featured appsperia template. <br>
                     Now available on the App Store and Play Store!
@@ -89,22 +110,24 @@
                 </button>
 
             </section>
-            <section id="contact_ctn"></section>
+            <section class="contact" id="contact_ctn">
+                <p>Contact</p>
+            </section>
         </div>
         <!-- Phone with Hand and Phone Content -->
         <div class="phone_wrap">
             <div id="hand_phone"><img src="images/hand-mockup.png" alt=""></div>
             <div id="phone_content">
                 <div id="phone_home">
-                    <img src="images/1.jpg" alt="" style="display: block;">
-                    <img src="images/2.jpg" alt="">
-                    <img src="images/3.jpg" alt="">
-                    <img src="images/4.jpg" alt="">
-                    <img src="images/5.jpg" alt="">
-                    <img src="images/2.jpg" alt="">
-                    <img src="images/3.jpg" alt="">
-                    <img src="images/6.jpg" alt="">
-                    <img src="images/1.jpg" alt="">
+                    <img class="img_ctn home active" id="home_img" src="images/1.jpg" alt="">
+                    <img class="img_ctn features" id="features_img" src="images/2.jpg" alt="">
+                    <img class="img_ctn about" id="about_img" src="images/3.jpg" alt="">
+                    <img class="img_ctn video" id="video_img" src="images/4.jpg" alt="">
+                    <img class="img_ctn feedback" id="feedback_img" src="images/5.jpg" alt="">
+                    <img class="img_ctn screenshots" id="screenshots_img" src="images/2.jpg" alt="">
+                    <img class="img_ctn pricing" id="pricing_img" src="images/3.jpg" alt="">
+                    <img class="img_ctn download" id="download_img" src="images/6.jpg" alt="">
+                    <img class="img_ctn contact" id="contact_img" src="images/1.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -130,6 +153,7 @@
             </div>
         </div>
     </div>
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,9 @@ body {
 html {
   height: 100%;
 }
+.active {
+  display: block;
+}
 #header {
   display: flex;
   position: absolute;
@@ -73,15 +76,37 @@ html {
 }
 main {
   position: relative;
-  top: 40%;
-  width: 40%;
-  left: 10%;
+}
+main #section_dot {
+  position: fixed;
+  top: 50%;
+  margin-left: 5px;
+  z-index: -1;
+}
+main #section_dot .class {
+  display: block;
+}
+main #section_dot li {
+  list-style-type: circle;
+  font-size: 30px;
+  line-height: 16px;
+  color: white;
+}
+main #section_dot li span {
+  background-color: white;
+  width: 100%;
+  height: 100%;
 }
 main #main_content {
-  position: relative;
+  position: fixed;
+  top: 40%;
+  left: 23%;
+}
+main #main_content .active {
+  display: block;
 }
 main #main_content section {
-  width: 60%;
+  width: 70%;
   font-family: Open Sans;
   font-weight: 200;
   font-size: 15px;
@@ -92,7 +117,7 @@ main #main_content section p {
   line-height: 26px;
 }
 main #main_content section h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: normal;
   font-family: 'walkway_semiboldregular';
   margin-bottom: 30px;
@@ -131,6 +156,9 @@ main .phone_wrap #phone_content {
   left: auto;
   margin-top: 75px;
   margin-right: 90px;
+}
+main .phone_wrap #phone_content .active {
+  display: block;
 }
 main .phone_wrap #phone_content img {
   display: none;
