@@ -36,6 +36,7 @@ html {
   display: none;
 }
 #menu_bar_nav .menu_bar {
+  z-index: 2;
   background-color: red;
   display: flex;
   flex-direction: column;
