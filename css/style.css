@@ -11,9 +11,6 @@ body {
 html {
   height: 100%;
 }
-.active {
-  display: block;
-}
 #header {
   display: flex;
   position: absolute;
@@ -81,10 +78,7 @@ main #section_dot {
   position: fixed;
   top: 50%;
   margin-left: 5px;
-  z-index: -1;
-}
-main #section_dot .class {
-  display: block;
+  z-index: 1;
 }
 main #section_dot li {
   list-style-type: circle;
