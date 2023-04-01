@@ -45,8 +45,8 @@ window.addEventListener('click', function (e) {
 // click download app button to open download section
 let download_app_button = document.getElementById('download_btn');
 download_app_button.addEventListener('click', () => {
-    document.getElementById('home_ctn').classList.remove('active');
-    document.getElementById('download_ctn').classList.add('active');
+    removeCLassActive('home');
+    addCLassActive('download');
 })
 
 
