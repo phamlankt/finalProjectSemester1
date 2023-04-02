@@ -1,6 +1,8 @@
 body {
   background: url(../images/bg.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: centerS;
   background-size: 100%;
   padding: 0;
   margin: 0;
@@ -80,6 +82,7 @@ main #section_dot {
   top: 50%;
   margin-left: 5px;
   z-index: 1;
+  list-style-type: none;
 }
 main #section_dot .active {
   background-color: white;
@@ -101,7 +104,7 @@ main #main_content .active {
   display: block;
 }
 main #main_content section {
-  width: 70%;
+  width: 500px;
   font-family: Open Sans;
   font-weight: 200;
   font-size: 15px;
@@ -112,7 +115,7 @@ main #main_content section p {
   line-height: 26px;
 }
 main #main_content section h2 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: normal;
   font-family: 'walkway_semiboldregular';
   margin-bottom: 30px;
@@ -134,29 +137,74 @@ main #main_content section button {
 main #main_content section button span {
   margin-right: 10px;
 }
-main .phone_wrap {
+main #main_content section.features ul {
+  margin-left: -50px;
+  float: left;
+  list-style-type: none;
+}
+main #main_content section.features ul li {
+  margin: 10px;
+}
+main #main_content section.features ul li a:hover .tooltip_text {
+  visibility: visible;
+}
+main #main_content section.features ul li a {
+  text-decoration: none;
+  color: white;
   position: relative;
-  right: 100px;
 }
-main .phone_wrap #hand_phone {
-  position: fixed;
-  top: 20%;
-  right: 15%;
-  left: auto;
+main #main_content section.features ul li a span {
+  color: #E02217;
+  padding: 5px;
+  font-weight: normal;
+  line-height: 20px;
 }
-main .phone_wrap #phone_content {
-  position: fixed;
-  top: 20%;
-  right: 15%;
-  left: auto;
-  margin-top: 75px;
-  margin-right: 90px;
+main #main_content section.features ul li a .tooltip_text {
+  visibility: hidden;
+  width: 355px;
+  height: 100px;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 20px -167px;
+  pointer-events: none;
+  cursor: default;
 }
-main .phone_wrap #phone_content .active {
-  display: block;
+@media (min-width: 870px) {
+  main .phone_wrap {
+    position: relative;
+    right: 100px;
+  }
+  main .phone_wrap #hand_phone {
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    left: auto;
+  }
+  main .phone_wrap #phone_content {
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    left: auto;
+    margin-top: 75px;
+    margin-right: 90px;
+  }
+  main .phone_wrap #phone_content .active {
+    display: block;
+  }
+  main .phone_wrap #phone_content img {
+    display: none;
+  }
 }
-main .phone_wrap #phone_content img {
-  display: none;
+@media (max-width: 870px) {
+  main .phone_wrap {
+    display: none;
+  }
 }
 #footer {
   display: flex;
