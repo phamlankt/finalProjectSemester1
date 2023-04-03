@@ -1,16 +1,14 @@
 body {
   background: url(../images/bg.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  height: 100%;
+  color: #333;
   font-family: Open Sans;
 }
-html {
+html,
+body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 #header {
   display: flex;
@@ -105,7 +103,7 @@ main #main_content .active {
 main #main_content section {
   width: 500px;
   font-family: Open Sans;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 15px;
   color: white;
   display: none;
@@ -121,6 +119,9 @@ main #main_content section h2 {
 }
 main #main_content section .btn:hover {
   background-color: white;
+  color: black;
+}
+main #main_content section .btn:hover span {
   color: black;
 }
 main #main_content section button {
@@ -173,6 +174,71 @@ main #main_content section.features ul li a .tooltip_text {
   margin: 0 0 20px -167px;
   pointer-events: none;
   cursor: default;
+}
+main #main_content section.about ul {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  background-color: black;
+  height: 60px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: center;
+}
+main #main_content section.about ul li.active_ctn {
+  border-bottom: 5px solid red;
+}
+main #main_content section.about ul li a {
+  text-decoration: none;
+}
+main #main_content section.about ul li a span.icon {
+  padding: 5px;
+  color: red;
+}
+main #main_content section.about ul li a span {
+  color: white;
+}
+main #main_content section.about ul li.active {
+  border-bottom-color: #E02217;
+}
+main #main_content section.about .about {
+  display: none;
+}
+main #main_content section.about .active_ctn {
+  display: block;
+}
+main #main_content section.about div#about_design_ctn span.icon::before,
+main #main_content section.about div#about_demos_ctn span.icon::before,
+main #main_content section.about div#about_features_ctn span.icon::before,
+main #main_content section.about div#about_elements_ctn span.icon::before {
+  padding: 8px;
+  padding-left: 0;
+  margin-top: 20px;
+  color: red;
+}
+main #main_content section.about div#about_features_ctn div span,
+main #main_content section.about div#about_elements_ctn div span {
+  display: inline-block;
+  width: 49%;
+  line-height: 26px;
+}
+main #main_content section.download button {
+  padding-bottom: 10px;
+  height: 40px;
+}
+main #main_content section.download button .icon {
+  display: inline-block;
+  width: 17px;
+  height: 20px;
+}
+main #main_content section.download button .appstore {
+  background: url('../images/appstore.png');
+}
+main #main_content section.download button .playstore {
+  background: url('../images/playstore.png');
 }
 @media (min-width: 870px) {
   main .phone_wrap {
