@@ -1,17 +1,16 @@
-body {
-  background: url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #333;
-  font-family: Open Sans;
-  position: absolute;
-}
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  position: relative;
+}
+body {
+  background: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  font-family: Open Sans;
 }
 #header {
   display: flex;
