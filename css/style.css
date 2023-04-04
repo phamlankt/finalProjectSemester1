@@ -11,6 +11,8 @@ body {
   background-position: center;
   color: #333;
   font-family: Open Sans;
+  overflow: hidden;
+  height: 100vh;
 }
 #header {
   display: flex;
@@ -30,6 +32,19 @@ body {
 #header .header_logo {
   margin-top: 15px;
   margin-left: 250px;
+}
+@media (max-width: 480px) {
+  #header {
+    left: 0%;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #header .menu_wrapper {
+    margin-right: unset;
+  }
+  #header .header_logo {
+    margin-left: unset;
+  }
 }
 #menu_bar_nav {
   flex: 1;

@@ -14,12 +14,17 @@ body {
     background-position: center;
     color: #333;
     font-family: Open Sans;
+    overflow: hidden;
+    height: 100vh;
 }
+
 
 
 #header {
     display: flex;
     position: absolute;
+
+
 
     .menu_wrapper {
         margin: 20px;
@@ -37,6 +42,22 @@ body {
     .header_logo {
         margin-top: 15px;
         margin-left: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        left: 0%;
+        justify-content: space-between;
+        width: 100%;
+
+        .menu_wrapper {
+            margin-right: unset;
+        }
+
+        .header_logo {
+            margin-left: unset;
+        }
     }
 }
 
@@ -335,6 +356,8 @@ main {
         }
     }
 
+
+
     @media (min-width: 870px) {
         .phone_wrap {
             position: relative;
@@ -376,6 +399,7 @@ main {
             display: none;
         }
     }
+
 }
 
 
