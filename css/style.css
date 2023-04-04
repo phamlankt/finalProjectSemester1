@@ -8,7 +8,6 @@ body {
   background: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   color: #333;
   font-family: Open Sans;
   overflow: hidden;
@@ -32,19 +31,6 @@ body {
 #header .header_logo {
   margin-top: 15px;
   margin-left: 250px;
-}
-@media (max-width: 480px) {
-  #header {
-    left: 0%;
-    justify-content: space-between;
-    width: 100%;
-  }
-  #header .menu_wrapper {
-    margin-right: unset;
-  }
-  #header .header_logo {
-    margin-left: unset;
-  }
 }
 #menu_bar_nav {
   flex: 1;
@@ -111,7 +97,7 @@ main #section_dot li {
 }
 main #main_content {
   position: fixed;
-  top: 40%;
+  top: 30%;
   left: 23%;
 }
 main #main_content .active {
@@ -153,6 +139,14 @@ main #main_content section button {
 }
 main #main_content section button span {
   margin-right: 10px;
+}
+@media screen and (max-width: 480px) {
+  main #main_content section {
+    max-width: 300px;
+  }
+  main #main_content section h2 {
+    font-size: 9vw;
+  }
 }
 main #main_content section.features ul {
   margin-left: -50px;
@@ -272,37 +266,6 @@ main #main_content section.download button .appstore {
 main #main_content section.download button .playstore {
   background: url('../images/playstore.png');
 }
-@media (min-width: 870px) {
-  main .phone_wrap {
-    position: relative;
-    right: 100px;
-  }
-  main .phone_wrap #hand_phone {
-    position: fixed;
-    top: 20%;
-    right: 15%;
-    left: auto;
-  }
-  main .phone_wrap #phone_content {
-    position: fixed;
-    top: 20%;
-    right: 15%;
-    left: auto;
-    margin-top: 75px;
-    margin-right: 90px;
-  }
-  main .phone_wrap #phone_content .active {
-    display: block;
-  }
-  main .phone_wrap #phone_content img {
-    display: none;
-  }
-}
-@media (max-width: 870px) {
-  main .phone_wrap {
-    display: none;
-  }
-}
 #footer {
   display: flex;
   position: absolute;
@@ -356,4 +319,74 @@ main #main_content section.download button .playstore {
   text-align: center;
   line-height: 27px;
   text-transform: none;
+}
+@media (min-width: 870px) {
+  main .phone_wrap {
+    position: relative;
+    right: 100px;
+  }
+  main .phone_wrap #hand_phone {
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    left: auto;
+  }
+  main .phone_wrap #phone_content {
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    left: auto;
+    margin-top: 75px;
+    margin-right: 90px;
+  }
+  main .phone_wrap #phone_content .active {
+    display: block;
+  }
+  main .phone_wrap #phone_content img {
+    display: none;
+  }
+}
+@media (max-width: 870px) {
+  main .phone_wrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  #header {
+    left: 0%;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #header .menu_wrapper {
+    margin-right: unset;
+  }
+  #header .header_logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main #section_dot {
+    display: none;
+  }
+  main #main_content {
+    left: 15%;
+  }
+  main #main_content section button#download_btn {
+    display: block;
+    margin: auto;
+  }
+  main #main_content section.about ul {
+    font-size: 3vw;
+  }
+  #footer .footer_wrapper {
+    width: 100%;
+  }
+  #footer .footer_wrapper .footer_menu {
+    display: none;
+  }
+  #footer .footer_wrapper #social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: unset;
+  }
 }
