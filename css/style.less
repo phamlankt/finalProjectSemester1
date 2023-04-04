@@ -352,6 +352,114 @@ main {
                 }
             }
         }
+
+        section.contact {
+            ul {
+                list-style-type: none;
+                font-size: normal;
+                float: left;
+                padding: 0;
+                margin-right: 50px;
+
+                li {
+                    position: relative;
+                    margin-bottom: 10px;
+
+                    span::before {
+                        color: red;
+                        margin-right: 5px;
+                    }
+
+                    div.tooltip_text {
+                        visibility: hidden;
+                        background-color: black;
+                        opacity: 0.9;
+                        z-index: 1;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        position: relative;
+                        border-bottom: 10px solid white;
+                        width: 280px;
+                        position: absolute;
+                        bottom: 100%;
+                        margin: 15px 0;
+                        left: -70px;
+
+                        span.icon::before {
+                            font-size: xx-large;
+                            margin-right: 15px;
+                            margin-left: 10px;
+                        }
+
+                        span {
+                            display: block;
+                        }
+
+                        p {
+                            margin: 20px;
+                            font-size: 15px;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+                                font-weight: 900;
+                            }
+
+                            a:hover {
+                                color: red;
+                            }
+                        }
+
+                        span.tooltip_arrow {
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            bottom: -30px;
+                            border-top: 10px solid white;
+                            border-left: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                        }
+
+
+                    }
+                }
+
+                li:hover .tooltip_text {
+                    visibility: visible;
+                }
+
+            }
+
+            #contact_form {
+                float: left;
+                margin-top: 30px;
+                width: 100%;
+
+                input,
+                textarea {
+                    float: left;
+                    width: 47%;
+                    border-radius: 4px;
+                    border: none;
+                    box-sizing: border-box;
+                    color: #fff;
+                    outline: none;
+                    padding: 10px;
+                    margin-right: 3%;
+                    margin-bottom: 10px;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+                textarea{
+                    width: 97%;
+                    height: 70px;
+                    resize: none;
+                }
+            }
+        }
     }
 
 }
