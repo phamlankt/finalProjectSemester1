@@ -460,6 +460,9 @@ main #main_content section.contact #contact_form textarea {
   main #main_content {
     left: 15%;
   }
+  main #main_content section h2 {
+    text-align: center;
+  }
   main #main_content section button#download_btn {
     display: block;
     margin: auto;
@@ -469,6 +472,11 @@ main #main_content section.contact #contact_form textarea {
   }
   main #main_content section.contact ul {
     margin-right: 30px;
+  }
+  main #main_content section.contact #submit_btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   #footer .footer_wrapper {
     width: 100%;
