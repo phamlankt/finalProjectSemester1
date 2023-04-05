@@ -467,6 +467,9 @@ main #main_content section.contact #contact_form textarea {
   main #main_content section.about ul {
     font-size: 3vw;
   }
+  main #main_content section.contact ul {
+    margin-right: 30px;
+  }
   #footer .footer_wrapper {
     width: 100%;
   }
