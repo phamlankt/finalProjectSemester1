@@ -1,18 +1,3 @@
-// import ('./siblingDisplay.js');
-
-// Detect  keyup and keydown event
-document.onkeydown = function (evt) {
-    if (evt.keyCode == 38) {
-        // console.log("Key up");
-        displayPreviousSibling();
-
-    } else if (evt.keyCode == 40) {
-        // console.log("Key down");
-        displayNextSibling();
-    }
-}
-
-
 function displayPreviousSibling() {
     active_items = document.getElementsByClassName('active');
     for (let active_item of active_items) {

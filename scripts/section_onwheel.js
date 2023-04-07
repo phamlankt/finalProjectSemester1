@@ -1,24 +1,4 @@
-function displayPreviousSibling() {
-    active_items = document.getElementsByClassName('active');
-    for (let active_item of active_items) {
-        if (active_item.previousElementSibling != null) {
-            active_item.classList.remove('active');
-            active_item.previousElementSibling.classList.add('active');
-            window.location.href = `/#${active_item.previousElementSibling.getAttribute('id')}`;
-        }
-    }
-}
-
-function displayNextSibling() {
-    active_items = document.getElementsByClassName('active');
-    for (let active_item of active_items) {
-        if (active_item.nextElementSibling != null) {
-            active_item.classList.remove('active');
-            active_item.nextElementSibling.classList.add('active');
-            window.location.href = `/#${active_item.nextElementSibling.getAttribute('id')}`;
-        }
-    }
-}
+// import ('./siblingDisplay.js');
 
 // Detect wheel event from mouse
 window.addEventListener("wheel", event => {
@@ -61,3 +41,25 @@ window.addEventListener("wheel", event => {
 //         }
 //     }
 // })
+
+function displayPreviousSibling() {
+    active_items = document.getElementsByClassName('active');
+    for (let active_item of active_items) {
+        if (active_item.previousElementSibling != null) {
+            active_item.classList.remove('active');
+            active_item.previousElementSibling.classList.add('active');
+            window.location.href = `/#${active_item.previousElementSibling.getAttribute('id')}`;
+        }
+    }
+}
+
+function displayNextSibling() {
+    active_items = document.getElementsByClassName('active');
+    for (let active_item of active_items) {
+        if (active_item.nextElementSibling != null) {
+            active_item.classList.remove('active');
+            active_item.nextElementSibling.classList.add('active');
+            window.location.href = `/#${active_item.nextElementSibling.getAttribute('id')}`;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+// import ('./class_add_remove.js');
+
 // Section feedback
 let feedback_client_list = document.querySelectorAll('main #main_content section.feedback #fb_client_controls li');
 for (let fb of feedback_client_list) {
@@ -31,3 +33,20 @@ for (let fb of feedback_client_list) {
 //         }
 //     })
 // }
+function addCLassActive(classname, activename) {
+    // let classItems = document.getElementsByClassName(classname);
+    let classItems = document.querySelectorAll('.' + classname);
+    for (let item of classItems) {
+        item.classList.add(activename);
+        window.location.href = `/#${item.getAttribute('id')}`;
+    }
+}
+
+
+function removeCLassActive(classname, activename) {
+    // let classItems = document.getElementsByClassName(classname);
+    let classItems = document.querySelectorAll('.' + classname);
+    for (let item of classItems) {
+        item.classList.remove(activename);
+    }
+}

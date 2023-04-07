@@ -2,6 +2,8 @@ let item_sections = document.getElementsByClassName("item");
 let active_items = document.getElementsByClassName('active');
 
 
+// import ('./class_add_remove.js');
+
 // Click li to display coresponding content
 let list = document.querySelectorAll('#section_dot li');
 
