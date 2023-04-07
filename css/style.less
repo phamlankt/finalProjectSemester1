@@ -1,4 +1,26 @@
-@import "./nguyen";
+@import url('./header.less');
+@import url('./menu.less');
+@import url('./footer.less');
+@import url('./responsive.less');
+
+@font-face {
+    font-family: 'walkway_semiboldregular';
+    src: url('./font/Walkway_SemiBold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'walkway_ultraboldregular';
+    src: url('./font/Walkway_UltraBold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
 
 html,
 body {
@@ -17,83 +39,22 @@ body {
     height: 100vh;
 }
 
-
-
-#header {
-    display: flex;
-    position: absolute;
-
-
-
-    .menu_wrapper {
-        margin: 20px;
-        margin-left: 14px;
-        margin-right: 150px;
-
-        div {
-            width: 25px;
-            height: 3px;
-            background-color: red;
-            margin: 5px;
-        }
-    }
-
-    .header_logo {
-        margin-top: 15px;
-        margin-left: 250px;
-    }
+// HEADINGS
+h1,
+h2,
+h3 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: normal;
+    font-family: 'walkway_semiboldregular';
+    line-height: 1.2;
+    margin-top: 20px;
 }
 
-#menu_bar_nav {
-    // display: flex;
-    flex: 1;
-    height: 100%;
-    display: none;
 
-    .menu_bar {
-        z-index: 2;
-        background-color: red;
-        display: flex;
-        flex-direction: column;
-        row-gap: 30px;
-        width: 240px;
 
-        .menu_logo {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
 
-        .menu_items {
-            display: flex;
-            flex-direction: column;
-            row-gap: 30px;
-            margin-top: 30px;
-
-            div {
-                margin: 0px;
-
-                a {
-
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    color: white;
-                    font-weight: 600px;
-                    padding: 0 25px;
-                    font-family: Open Sans;
-                    font-size: 13px;
-                    font-weight: 700;
-
-                    span {
-                        padding-left: 0px;
-                        padding-right: 25px;
-                        color: white;
-                    }
-                }
-            }
-        }
-    }
-}
 
 main {
     position: relative;
@@ -124,12 +85,15 @@ main {
 
     #main_content {
         position: fixed;
-        top: 30%;
+        top: 35%;
         left: 23%;
+        height: 100vh;
+        overflow: hidden;
 
-        .active {
-            display: block;
-        }
+
+        // .active {
+        //     display: block;
+        // }
 
         section {
             width: 500px;
@@ -137,7 +101,13 @@ main {
             font-weight: 300;
             font-size: 15px;
             color: white;
-            display: none;
+            // display: none;
+            // display: flex;
+            // align-items: center;
+            // flex-direction: column;
+            // justify-content: center;
+            display: block;
+            height: 100vh;
 
             p {
                 line-height: 26px;
@@ -298,7 +268,7 @@ main {
 
             }
 
-            .about {
+            .about_subctn {
                 display: none;
             }
 
@@ -330,6 +300,53 @@ main {
                 }
             }
 
+        }
+
+        section.feedback {
+            .client_fb {
+                display: flex;
+
+                .fb_active {
+                    display: block;
+                }
+
+                div {
+                    display: none;
+
+                    span.client_name {
+                        strong {
+                            font-family: 'walkway_ultraboldregular';
+                        }
+
+                        font-family: 'walkway_ultraboldregular';
+                    }
+
+                    span.client_stars {
+                        float: right;
+                        color: red;
+                    }
+                }
+
+            }
+
+            #fb_client_controls {
+                list-style-type: none;
+                margin-left: -40px;
+
+                .fb_active {
+                    background-color: white;
+                }
+
+                li {
+                    display: inline-block;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 10px;
+
+                }
+            }
         }
 
         section.download {
@@ -453,7 +470,8 @@ main {
                     font-size: 13px;
                     font-weight: 300;
                 }
-                textarea{
+
+                textarea {
                     width: 97%;
                     height: 70px;
                     resize: none;
@@ -462,189 +480,4 @@ main {
         }
     }
 
-}
-
-
-#footer {
-    display: flex;
-    position: absolute;
-
-    .footer_wrapper {
-        position: fixed;
-        bottom: 2%;
-        display: flex;
-
-        .footer_menu {
-            margin: 20px;
-            margin-left: 14px;
-            margin-right: 150px;
-
-            div {
-                width: 25px;
-                height: 3px;
-                margin: 5px;
-                display: none;
-            }
-        }
-
-        #social-icons {
-            margin-top: 15px;
-            margin-left: 250px;
-
-            ul {
-                display: block;
-                padding: 0;
-                margin: 0;
-                list-style-type: none;
-
-                li {
-                    display: inline-block;
-
-                    a {
-                        font-size: 28px;
-                        color: white;
-                        text-decoration: none;
-                        transition: 0.3s;
-
-                        i {
-                            font-style: normal;
-                            font-weight: normal;
-                            opacity: 1;
-                            display: block;
-                            font-variant: normal;
-                            font-size: 13px;
-                            border: 1px solid white;
-                            border-radius: 4px;
-                            width: 24px;
-                            height: 24px;
-                            text-align: center;
-                            line-height: 27px;
-                            text-transform: none;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-}
-
-
-// Responsive for different screen size
-
-@media (min-width: 870px) {
-    main {
-        .phone_wrap {
-            position: relative;
-            right: 100px;
-
-            // @media (max-width: 1400px) {
-            #hand_phone {
-                // width: 60%;
-                position: fixed;
-                top: 20%;
-                right: 15%;
-                left: auto;
-                // }
-            }
-
-            #phone_content {
-                // width: 60%;
-                position: fixed;
-                top: 20%;
-                right: 15%;
-                left: auto;
-                margin-top: 75px;
-                margin-right: 90px;
-
-                .active {
-                    display: block;
-                }
-
-                img {
-                    // display: block;
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 870px) {
-    main {
-        .phone_wrap {
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #header {
-        left: 0%;
-        justify-content: space-between;
-        width: 100%;
-
-        .menu_wrapper {
-            margin-right: unset;
-        }
-
-        .header_logo {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-    }
-
-    main {
-        #section_dot {
-            display: none;
-        }
-
-        #main_content {
-            left: 15%;
-
-            section {
-                h2{
-                    text-align: center;
-                }
-                button#download_btn {
-                    display: block;
-                    margin: auto;
-                }
-            }
-
-            section.about {
-                ul {
-                    font-size: 3vw;
-                }
-            }
-            section.contact{
-                ul{
-                    margin-right: 30px;
-                }
-                #submit_btn{
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-        }
-    }
-
-    #footer {
-        .footer_wrapper {
-            width: 100%;
-
-            .footer_menu {
-                display: none;
-            }
-
-            #social-icons {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                margin-left: unset;
-            }
-        }
-    }
 }

@@ -1,0 +1,122 @@
+// out:false
+// Responsive for different screen size
+
+@media (min-width: 870px) {
+    main {
+        .phone_wrap {
+            position: relative;
+            right: 100px;
+
+            // @media (max-width: 1400px) {
+            #hand_phone {
+                // width: 60%;
+                position: fixed;
+                top: 20%;
+                right: 15%;
+                left: auto;
+                // }
+            }
+
+            #phone_content {
+                // width: 60%;
+                position: fixed;
+                top: 20%;
+                right: 15%;
+                left: auto;
+                margin-top: 75px;
+                margin-right: 90px;
+
+                .active {
+                    display: block;
+                }
+
+                img {
+                    // display: block;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    main {
+        .phone_wrap {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        left: 0%;
+        justify-content: space-between;
+        width: 100%;
+
+        .menu_wrapper {
+            margin-right: unset;
+        }
+
+        .header_logo {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    main {
+        #section_dot {
+            display: none;
+        }
+
+        #main_content {
+            left: 15%;
+
+            section {
+                h2 {
+                    text-align: center;
+                }
+
+                button#download_btn {
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            section.about {
+                ul {
+                    font-size: 3vw;
+                }
+            }
+
+            section.contact {
+                ul {
+                    margin-right: 30px;
+                }
+
+                #submit_btn {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    #footer {
+        .footer_wrapper {
+            width: 100%;
+
+            .footer_menu {
+                display: none;
+            }
+
+            #social-icons {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-left: unset;
+            }
+        }
+    }
+}

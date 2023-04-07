@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semester1 Project</title>
+    <title>Semester1 Project - AppSperia - App Landing Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fontawaresome/css/brands.css">
+    <!-- <link rel="stylesheet" href="css/fontawaresome/css/brands.css">
     <link rel="stylesheet" href="css/fontawaresome/css/all.css">
-    <link rel="stylesheet" href="css/fontawaresome/css/fontawesome.css">
+    <link rel="stylesheet" href="css/fontawaresome/css/fontawesome.css"> -->
     <link rel="stylesheet" href="css/font/flaticon.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -181,13 +181,13 @@
                         </a>
                     </li>
                 </ul>
-                <div class="about active_ctn" id="about_design_ctn">
+                <div class="about_subctn active_ctn" id="about_design_ctn">
                     <span class="icon flaticon-lightbulb">Good design doesn't date!</span>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error veritatis velit ullam
                         perspiciatis in hic quasi possimus aliquam natus reiciendis, molestiae voluptatibus accusamus
                         eveniet eum molestias nihil quas suscipit accusantium.</p>
                 </div>
-                <div class="about" id="about_features_ctn">
+                <div class="about_subctn" id="about_features_ctn">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora similique excepturi obcaecati,
                         aiores nostrum esse illo in soluta.</p>
                     <div>
@@ -197,13 +197,13 @@
                         <span class="icon flaticon-lightbulb">Amazing Features</span>
                     </div>
                 </div>
-                <div class="about" id="about_demos_ctn">
+                <div class="about_subctn" id="about_demos_ctn">
                     <span class="icon flaticon-drawer1">Check out Appsperia's multiple demos!</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora similique excepturi obcaecati,
                         maiores nostrum esse illo in soluta at saepe perspiciatis eos quasi laudantium sunt ad quaerat
                         ipsum dolor sit amet, consectetur adipisicing elit?</p>
                 </div>
-                <div class="about" id="about_elements_ctn">
+                <div class="about_subctn" id="about_elements_ctn">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora similique excepturi obcaecati,
                         aiores nostrum esse illo in soluta.</p>
                     <div>
@@ -215,10 +215,63 @@
                 </div>
             </section>
             <section class="video" id="video_ctn">
-                <p>Video</p>
+                <h2><strong>Video</strong> <span>presentation</span></h2>
+                <iframe src="https://player.vimeo.com/video/33790882?title=0&byline=0&portrait=0&color=e02217"
+                    width="500" height="281">
+                </iframe>
             </section>
             <section class="feedback" id="feedback_ctn">
-                <p>Feedback</p>
+                <h2>Clients feedbacks</h2>
+                <div class="client_fb">
+                    <div class="client1 fb_active" id="client1_fb">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero dolores omnis illum,
+                            voluptates fugiat incidunt, consectetur aspernatur rerum. Consequatur obcaecati, facere
+                            iusto alias nostrum officiis modi eum perspiciatis.
+                        </p>
+                        <span class="client_name"><strong>Mark Williams</strong> - Developer</span>
+                        <span class="client_stars">
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-half3"></span>
+                            <span class="icon flaticon-fivepointed"></span>
+                            <span class="icon flaticon-fivepointed"></span>
+                        </span>
+                    </div>
+                    <div class="client2" id="client2_fb">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero dolores omnis illum,
+                            voluptates fugiat incidunt, consectetur aspernatur rerum. Consequatur obcaecati, facere
+                            iusto alias nostrum officiis modi eum perspiciatis.
+                        </p>
+                        <span class="client_name"><strong>Andreas Bosch</strong> - CEO</span>
+                        <span class="client_stars">
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-fivepointed"></span>
+                        </span>
+                    </div>
+                    <div class="client3" id="client3_fb">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero dolores omnis illum,
+                            voluptates fugiat incidunt, consectetur aspernatur rerum. Consequatur obcaecati, facere
+                            iusto alias nostrum officiis modi eum perspiciatis.
+                        </p>
+                        <span class="client_name"><strong>Michael Speria</strong> - Manager</span>
+                        <span class="client_stars">
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-little27"></span>
+                            <span class="icon flaticon-fivepointed"></span>
+                            <span class="icon flaticon-fivepointed"></span>
+                        </span>
+                    </div>
+                </div>
+                <ul class="fb_client_controls" id="fb_client_controls">
+                    <li class="client1 fb_active" id="id_client1"></li>
+                    <li class="client2" id="id_client2"></li>
+                    <li class="client3" id="id_client3"></li>
+                </ul>
+
             </section>
             <section class="screenshots" id="screenshots_ctn">
                 <p>Screenshots</p>
@@ -324,7 +377,7 @@
             </div>
         </div>
     </div>
-    <script src="scripts/app.js"></script>
+    <script src="./scripts/app.js" type="module"></script>
 </body>
 
 </html>

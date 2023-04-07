@@ -1,18 +1,3 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-body {
-  background: url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #333;
-  font-family: Open Sans;
-  overflow: hidden;
-  height: 100vh;
-}
 #header {
   display: flex;
   position: absolute;
@@ -73,288 +58,6 @@ body {
   padding-left: 0px;
   padding-right: 25px;
   color: white;
-}
-main {
-  position: relative;
-}
-main #section_dot {
-  position: fixed;
-  top: 50%;
-  margin-left: 5px;
-  z-index: 1;
-  list-style-type: none;
-}
-main #section_dot .active {
-  background-color: white;
-}
-main #section_dot li {
-  border: 1px solid white;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  margin-left: -20px;
-  margin-top: 5px;
-}
-main #main_content {
-  position: fixed;
-  top: 30%;
-  left: 23%;
-}
-main #main_content .active {
-  display: block;
-}
-main #main_content section {
-  width: 500px;
-  font-family: Open Sans;
-  font-weight: 300;
-  font-size: 15px;
-  color: white;
-  display: none;
-}
-main #main_content section p {
-  line-height: 26px;
-}
-main #main_content section h2 {
-  font-size: 50px;
-  font-weight: normal;
-  font-family: 'walkway_semiboldregular';
-  margin-bottom: 30px;
-}
-main #main_content section .btn:hover {
-  background-color: white;
-  color: black;
-}
-main #main_content section .btn:hover span {
-  color: black;
-}
-main #main_content section button {
-  background-color: red;
-  border-radius: 4px;
-  color: white;
-  width: 140px;
-  height: 30px;
-  border: none;
-  font-weight: bold;
-  margin-top: 20px;
-}
-main #main_content section button span {
-  margin-right: 10px;
-}
-@media screen and (max-width: 480px) {
-  main #main_content section {
-    max-width: 300px;
-  }
-  main #main_content section h2 {
-    font-size: 9vw;
-  }
-}
-main #main_content section.features ul {
-  margin-left: -50px;
-  float: left;
-  list-style-type: none;
-}
-main #main_content section.features ul li {
-  margin: 10px;
-}
-main #main_content section.features ul li a:hover .tooltip_text {
-  visibility: visible;
-}
-main #main_content section.features ul li a {
-  text-decoration: none;
-  color: white;
-  position: relative;
-}
-main #main_content section.features ul li a span,
-main #main_content section.features ul li a .tooltip_text::before {
-  color: #E02217;
-  padding: 5px;
-  font-weight: normal;
-  line-height: 20px;
-}
-main #main_content section.features ul li a .tooltip_text::before {
-  font-size: x-large;
-}
-main #main_content section.features ul li a .tooltip_text {
-  visibility: hidden;
-  width: 355px;
-  height: 60px;
-  background: black;
-  opacity: 0.9;
-  color: #fff;
-  text-align: left;
-  border-radius: 6px;
-  padding: 5px;
-  z-index: 1;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin: 0 0 10px -167px;
-  border-bottom: 10px solid white;
-}
-main #main_content section.features ul li a .tooltip_text .tooltip_bottom {
-  position: absolute;
-  bottom: -30px;
-  left: 167px;
-  width: 0px;
-  height: 0px;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid white;
-}
-main #main_content section.about ul {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-  background-color: black;
-  height: 60px;
-  align-items: stretch;
-  flex-wrap: wrap;
-  align-content: center;
-}
-main #main_content section.about ul li.active_ctn {
-  border-bottom: 5px solid red;
-}
-main #main_content section.about ul li a {
-  text-decoration: none;
-}
-main #main_content section.about ul li a span.icon {
-  padding: 5px;
-  color: red;
-}
-main #main_content section.about ul li a span {
-  color: white;
-}
-main #main_content section.about ul li.active {
-  border-bottom-color: #E02217;
-}
-main #main_content section.about .about {
-  display: none;
-}
-main #main_content section.about .active_ctn {
-  display: block;
-}
-main #main_content section.about div#about_design_ctn span.icon::before,
-main #main_content section.about div#about_demos_ctn span.icon::before,
-main #main_content section.about div#about_features_ctn span.icon::before,
-main #main_content section.about div#about_elements_ctn span.icon::before {
-  padding: 8px;
-  padding-left: 0;
-  margin-top: 20px;
-  color: red;
-}
-main #main_content section.about div#about_features_ctn div span,
-main #main_content section.about div#about_elements_ctn div span {
-  display: inline-block;
-  width: 49%;
-  line-height: 26px;
-}
-main #main_content section.download button {
-  padding-bottom: 10px;
-  height: 40px;
-}
-main #main_content section.download button .icon {
-  display: inline-block;
-  width: 17px;
-  height: 20px;
-}
-main #main_content section.download button .appstore {
-  background: url('../images/appstore.png');
-}
-main #main_content section.download button .playstore {
-  background: url('../images/playstore.png');
-}
-main #main_content section.contact ul {
-  list-style-type: none;
-  font-size: normal;
-  float: left;
-  padding: 0;
-  margin-right: 50px;
-}
-main #main_content section.contact ul li {
-  position: relative;
-  margin-bottom: 10px;
-}
-main #main_content section.contact ul li span::before {
-  color: red;
-  margin-right: 5px;
-}
-main #main_content section.contact ul li div.tooltip_text {
-  visibility: hidden;
-  background-color: black;
-  opacity: 0.9;
-  z-index: 1;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
-  border-bottom: 10px solid white;
-  width: 280px;
-  position: absolute;
-  bottom: 100%;
-  margin: 15px 0;
-  left: -70px;
-}
-main #main_content section.contact ul li div.tooltip_text span.icon::before {
-  font-size: xx-large;
-  margin-right: 15px;
-  margin-left: 10px;
-}
-main #main_content section.contact ul li div.tooltip_text span {
-  display: block;
-}
-main #main_content section.contact ul li div.tooltip_text p {
-  margin: 20px;
-  font-size: 15px;
-}
-main #main_content section.contact ul li div.tooltip_text p a {
-  text-decoration: none;
-  color: white;
-  font-weight: 900;
-}
-main #main_content section.contact ul li div.tooltip_text p a:hover {
-  color: red;
-}
-main #main_content section.contact ul li div.tooltip_text span.tooltip_arrow {
-  display: block;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  bottom: -30px;
-  border-top: 10px solid white;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-}
-main #main_content section.contact ul li:hover .tooltip_text {
-  visibility: visible;
-}
-main #main_content section.contact #contact_form {
-  float: left;
-  margin-top: 30px;
-  width: 100%;
-}
-main #main_content section.contact #contact_form input,
-main #main_content section.contact #contact_form textarea {
-  float: left;
-  width: 47%;
-  border-radius: 4px;
-  border: none;
-  box-sizing: border-box;
-  color: #fff;
-  outline: none;
-  padding: 10px;
-  margin-right: 3%;
-  margin-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
-  font-size: 13px;
-  font-weight: 300;
-}
-main #main_content section.contact #contact_form textarea {
-  width: 97%;
-  height: 70px;
-  resize: none;
 }
 #footer {
   display: flex;
@@ -490,4 +193,361 @@ main #main_content section.contact #contact_form textarea {
     width: 100%;
     margin-left: unset;
   }
+}
+@font-face {
+  font-family: 'walkway_semiboldregular';
+  src: url('font/Walkway_SemiBold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'walkway_ultraboldregular';
+  src: url('font/Walkway_UltraBold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+  font-family: Open Sans;
+  overflow: hidden;
+  height: 100vh;
+}
+h1,
+h2,
+h3 {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: normal;
+  font-family: 'walkway_semiboldregular';
+  line-height: 1.2;
+  margin-top: 20px;
+}
+main {
+  position: relative;
+}
+main #section_dot {
+  position: fixed;
+  top: 50%;
+  margin-left: 5px;
+  z-index: 1;
+  list-style-type: none;
+}
+main #section_dot .active {
+  background-color: white;
+}
+main #section_dot li {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -20px;
+  margin-top: 5px;
+}
+main #main_content {
+  position: fixed;
+  top: 35%;
+  left: 23%;
+  height: 100vh;
+  overflow: hidden;
+}
+main #main_content section {
+  width: 500px;
+  font-family: Open Sans;
+  font-weight: 300;
+  font-size: 15px;
+  color: white;
+  display: block;
+  height: 100vh;
+}
+main #main_content section p {
+  line-height: 26px;
+}
+main #main_content section h2 {
+  font-size: 50px;
+  font-weight: normal;
+  font-family: 'walkway_semiboldregular';
+  margin-bottom: 30px;
+}
+main #main_content section .btn:hover {
+  background-color: white;
+  color: black;
+}
+main #main_content section .btn:hover span {
+  color: black;
+}
+main #main_content section button {
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+  width: 140px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+main #main_content section button span {
+  margin-right: 10px;
+}
+@media screen and (max-width: 480px) {
+  main #main_content section {
+    max-width: 300px;
+  }
+  main #main_content section h2 {
+    font-size: 9vw;
+  }
+}
+main #main_content section.features ul {
+  margin-left: -50px;
+  float: left;
+  list-style-type: none;
+}
+main #main_content section.features ul li {
+  margin: 10px;
+}
+main #main_content section.features ul li a:hover .tooltip_text {
+  visibility: visible;
+}
+main #main_content section.features ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+main #main_content section.features ul li a span,
+main #main_content section.features ul li a .tooltip_text::before {
+  color: #E02217;
+  padding: 5px;
+  font-weight: normal;
+  line-height: 20px;
+}
+main #main_content section.features ul li a .tooltip_text::before {
+  font-size: x-large;
+}
+main #main_content section.features ul li a .tooltip_text {
+  visibility: hidden;
+  width: 355px;
+  height: 60px;
+  background: black;
+  opacity: 0.9;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px;
+  z-index: 1;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin: 0 0 10px -167px;
+  border-bottom: 10px solid white;
+}
+main #main_content section.features ul li a .tooltip_text .tooltip_bottom {
+  position: absolute;
+  bottom: -30px;
+  left: 167px;
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+main #main_content section.about ul {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  background-color: black;
+  height: 60px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: center;
+}
+main #main_content section.about ul li.active_ctn {
+  border-bottom: 5px solid red;
+}
+main #main_content section.about ul li a {
+  text-decoration: none;
+}
+main #main_content section.about ul li a span.icon {
+  padding: 5px;
+  color: red;
+}
+main #main_content section.about ul li a span {
+  color: white;
+}
+main #main_content section.about ul li.active {
+  border-bottom-color: #E02217;
+}
+main #main_content section.about .about_subctn {
+  display: none;
+}
+main #main_content section.about .active_ctn {
+  display: block;
+}
+main #main_content section.about div#about_design_ctn span.icon::before,
+main #main_content section.about div#about_demos_ctn span.icon::before,
+main #main_content section.about div#about_features_ctn span.icon::before,
+main #main_content section.about div#about_elements_ctn span.icon::before {
+  padding: 8px;
+  padding-left: 0;
+  margin-top: 20px;
+  color: red;
+}
+main #main_content section.about div#about_features_ctn div span,
+main #main_content section.about div#about_elements_ctn div span {
+  display: inline-block;
+  width: 49%;
+  line-height: 26px;
+}
+main #main_content section.feedback .client_fb {
+  display: flex;
+}
+main #main_content section.feedback .client_fb .fb_active {
+  display: block;
+}
+main #main_content section.feedback .client_fb div {
+  display: none;
+}
+main #main_content section.feedback .client_fb div span.client_name {
+  font-family: 'walkway_ultraboldregular';
+}
+main #main_content section.feedback .client_fb div span.client_name strong {
+  font-family: 'walkway_ultraboldregular';
+}
+main #main_content section.feedback .client_fb div span.client_stars {
+  float: right;
+  color: red;
+}
+main #main_content section.feedback #fb_client_controls {
+  list-style-type: none;
+  margin-left: -40px;
+}
+main #main_content section.feedback #fb_client_controls .fb_active {
+  background-color: white;
+}
+main #main_content section.feedback #fb_client_controls li {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+main #main_content section.download button {
+  padding-bottom: 10px;
+  height: 40px;
+}
+main #main_content section.download button .icon {
+  display: inline-block;
+  width: 17px;
+  height: 20px;
+}
+main #main_content section.download button .appstore {
+  background: url('../images/appstore.png');
+}
+main #main_content section.download button .playstore {
+  background: url('../images/playstore.png');
+}
+main #main_content section.contact ul {
+  list-style-type: none;
+  font-size: normal;
+  float: left;
+  padding: 0;
+  margin-right: 50px;
+}
+main #main_content section.contact ul li {
+  position: relative;
+  margin-bottom: 10px;
+}
+main #main_content section.contact ul li span::before {
+  color: red;
+  margin-right: 5px;
+}
+main #main_content section.contact ul li div.tooltip_text {
+  visibility: hidden;
+  background-color: black;
+  opacity: 0.9;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  border-bottom: 10px solid white;
+  width: 280px;
+  position: absolute;
+  bottom: 100%;
+  margin: 15px 0;
+  left: -70px;
+}
+main #main_content section.contact ul li div.tooltip_text span.icon::before {
+  font-size: xx-large;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+main #main_content section.contact ul li div.tooltip_text span {
+  display: block;
+}
+main #main_content section.contact ul li div.tooltip_text p {
+  margin: 20px;
+  font-size: 15px;
+}
+main #main_content section.contact ul li div.tooltip_text p a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+}
+main #main_content section.contact ul li div.tooltip_text p a:hover {
+  color: red;
+}
+main #main_content section.contact ul li div.tooltip_text span.tooltip_arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -30px;
+  border-top: 10px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+main #main_content section.contact ul li:hover .tooltip_text {
+  visibility: visible;
+}
+main #main_content section.contact #contact_form {
+  float: left;
+  margin-top: 30px;
+  width: 100%;
+}
+main #main_content section.contact #contact_form input,
+main #main_content section.contact #contact_form textarea {
+  float: left;
+  width: 47%;
+  border-radius: 4px;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  margin-right: 3%;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 13px;
+  font-weight: 300;
+}
+main #main_content section.contact #contact_form textarea {
+  width: 97%;
+  height: 70px;
+  resize: none;
 }
