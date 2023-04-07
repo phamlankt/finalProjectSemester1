@@ -1,52 +1,64 @@
-// import ('./class_add_remove.js');
+const client_fbs = document.querySelectorAll('.feedback div.client_fb div');
+const elNavs = document.querySelectorAll('.feedback ul.fb_client_controls li');
+client_fbs[0].classList.add('fb_active');
+elNavs[0].classList.add('fb_active');
 
-// Section feedback
-let feedback_client_list = document.querySelectorAll('main #main_content section.feedback #fb_client_controls li');
-for (let fb of feedback_client_list) {
-    fb.addEventListener('click', (e) => {
-        active_items = document.getElementsByClassName('fb_active');
-        let current_active_class = active_items[1].getAttribute('id').slice(active_items[1].getAttribute('id').indexOf('_') + 1);
-        let new_active_class = e.target.getAttribute('id').slice(e.target.getAttribute('id').indexOf('_') + 1);
 
-        if (new_active_class != current_active_class) {
-            removeCLassActive(current_active_class, 'fb_active');
-            addCLassActive(new_active_class, 'fb_active');
-            new_fb_div = document.querySelector('.client_fb .' + new_active_class);
-            window.location.href = `/#${new_fb_div.getAttribute('id')}`;
-
+const checkLastActive = () => {
+    for (let i = 0; i < client_fbs.length; i++) {
+        if (client_fbs[i].classList.contains('fb_active')) {
+            client_fbs[i].classList.remove('fb_active');
+            elNavs[i].classList.remove('fb_active');
+            if (i === client_fbs.length - 1) {
+                client_fbs[0].classList.add('fb_active');
+                elNavs[0].classList.add('fb_active');
+                return true;
+            } else {
+                client_fbs[i + 1].classList.add('fb_active');
+                elNavs[i + 1].classList.add('fb_active');
+                return false;
+            }
         }
-    })
-}
-
-
-// for (let i = 0; i < list.length; i++) {
-//     list[i].addEventListener('click', (e) => {
-
-//         active_items = document.getElementsByClassName('active');
-//         let item_name = e.target.id.slice(e.target.id.indexOf('_') + 1);
-//         let current_active_item = active_items[1].getAttribute('id').slice(active_items[1].getAttribute('id').indexOf('_') + 1);
-//         // console.log("item_name: " + item_name);
-//         // console.log("current_active_item: " + current_active_item);
-//         if (item_name != current_active_item) {
-//             removeCLassActive(current_active_item);
-//             addCLassActive(item_name);
-//         }
-//     })
-// }
-function addCLassActive(classname, activename) {
-    // let classItems = document.getElementsByClassName(classname);
-    let classItems = document.querySelectorAll('.' + classname);
-    for (let item of classItems) {
-        item.classList.add(activename);
-        window.location.href = `/#${item.getAttribute('id')}`;
     }
 }
 
+const slider = document.querySelector('.feedback div.client_fb');
 
-function removeCLassActive(classname, activename) {
-    // let classItems = document.getElementsByClassName(classname);
-    let classItems = document.querySelectorAll('.' + classname);
-    for (let item of classItems) {
-        item.classList.remove(activename);
+const changeSLide = () => {
+    if (slider) {
+        const widthTransform = Number(slider.offsetWidth);
+
+        if (checkLastActive()) slider.style.transform = `translateX(0px)`;
+
+        else {
+            slider.style.transform = `translateX(-${Number(slider.style.transform.replace(/[^\d.]/g, '')) + widthTransform}px)`;
+
+        }
+    }
+}
+
+let interval = setInterval(() => {
+    changeSLide()
+}, 3000);
+
+for (let i = 0; i < client_fbs.length; i++) {
+    elNavs[i].onclick = () => {
+        for (let j = 0; j < client_fbs.length; j++) {
+            client_fbs[j].classList.remove('fb_active');
+            elNavs[j].classList.remove('fb_active');
+        }
+        client_fbs[i].classList.add('fb_active');
+        elNavs[i].classList.add('fb_active');
+        if (i == 0) slider.style.transform = `translateX(0px)`;
+        else {
+            const widthTransform = Number(slider.offsetWidth);
+            console.log(widthTransform);
+            slider.style.transform = `translateX(-${i * (widthTransform)}px)`
+        }
+
+        clearInterval(interval);
+        interval = setInterval(() => {
+            changeSLide()
+        }, 3000)
     }
 }

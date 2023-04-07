@@ -305,13 +305,14 @@ main {
         section.feedback {
             .client_fb {
                 display: flex;
+                transition: transform 350ms ease-in-out;
 
-                .fb_active {
+                .default_client {
                     display: block;
                 }
 
                 div {
-                    display: none;
+                    min-width: 100%;
 
                     span.client_name {
                         strong {

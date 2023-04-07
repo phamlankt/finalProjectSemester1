@@ -414,12 +414,13 @@ main #main_content section.about div#about_elements_ctn div span {
 }
 main #main_content section.feedback .client_fb {
   display: flex;
+  transition: transform 350ms ease-in-out;
 }
-main #main_content section.feedback .client_fb .fb_active {
+main #main_content section.feedback .client_fb .default_client {
   display: block;
 }
 main #main_content section.feedback .client_fb div {
-  display: none;
+  min-width: 100%;
 }
 main #main_content section.feedback .client_fb div span.client_name {
   font-family: 'walkway_ultraboldregular';
