@@ -241,13 +241,13 @@ main {
                 align-items: stretch;
                 flex-wrap: wrap;
                 align-content: center;
+                position: relative;
 
                 li.active_ctn {
-                    border-bottom: 5px solid red;
+                    // border-bottom: 5px solid red;
                 }
 
-                li {
-
+                li.about_li {
                     a {
                         text-decoration: none;
 
@@ -262,8 +262,12 @@ main {
                     }
                 }
 
-                li.active {
-                    border-bottom-color: #E02217;
+                #underscore_line {
+                    position: absolute;
+                    border-bottom: 4px solid red;
+                    width: 25%;
+                    bottom: 0px;
+                    left: 0;
                 }
 
             }

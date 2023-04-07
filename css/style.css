@@ -374,22 +374,24 @@ main #main_content section.about ul {
   align-items: stretch;
   flex-wrap: wrap;
   align-content: center;
+  position: relative;
 }
-main #main_content section.about ul li.active_ctn {
-  border-bottom: 5px solid red;
-}
-main #main_content section.about ul li a {
+main #main_content section.about ul li.about_li a {
   text-decoration: none;
 }
-main #main_content section.about ul li a span.icon {
+main #main_content section.about ul li.about_li a span.icon {
   padding: 5px;
   color: red;
 }
-main #main_content section.about ul li a span {
+main #main_content section.about ul li.about_li a span {
   color: white;
 }
-main #main_content section.about ul li.active {
-  border-bottom-color: #E02217;
+main #main_content section.about ul #underscore_line {
+  position: absolute;
+  border-bottom: 4px solid red;
+  width: 25%;
+  bottom: 0px;
+  left: 0;
 }
 main #main_content section.about .about_subctn {
   display: none;
