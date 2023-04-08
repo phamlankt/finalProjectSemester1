@@ -3,8 +3,8 @@
 // click download app button to open download section
 let download_app_button = document.getElementById('download_btn');
 download_app_button.addEventListener('click', () => {
-    removeCLassActive('home','active');
-    addCLassActive('download','active');
+    removeCLassActive('home', 'active');
+    addCLassActive('download', 'active');
 })
 
 function addCLassActive(classname, activename) {
@@ -13,7 +13,12 @@ function addCLassActive(classname, activename) {
     for (let item of classItems) {
         console.log(item);
         item.classList.add(activename);
-        window.location.href = `/#${item.getAttribute('id')}`;
+        // window.location.href = `/#${item.getAttribute('id')}`;
+
+        let pathRoot = window.location.pathname;
+        pathRoot = pathRoot.split('/');
+        pathRoot = pathRoot[0];
+        window.location.href = `${pathRoot}/#${item.getAttribute('id')}`;
     }
 }
 

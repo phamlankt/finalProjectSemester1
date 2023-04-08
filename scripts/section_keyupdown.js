@@ -19,7 +19,13 @@ function displayPreviousSibling() {
         if (active_item.previousElementSibling != null) {
             active_item.classList.remove('active');
             active_item.previousElementSibling.classList.add('active');
-            window.location.href = `/#${active_item.previousElementSibling.getAttribute('id')}`;
+
+            let pathRoot = window.location.pathname;
+            pathRoot = pathRoot.split('/');
+            pathRoot = pathRoot[0];
+            window.location.href = `${pathRoot}/#${active_item.previousElementSibling.getAttribute('id')}`;
+
+            // window.location.href = `/#${active_item.previousElementSibling.getAttribute('id')}`;
         }
     }
 }
@@ -30,7 +36,13 @@ function displayNextSibling() {
         if (active_item.nextElementSibling != null) {
             active_item.classList.remove('active');
             active_item.nextElementSibling.classList.add('active');
-            window.location.href = `/#${active_item.nextElementSibling.getAttribute('id')}`;
+
+            let pathRoot = window.location.pathname;
+            pathRoot = pathRoot.split('/');
+            pathRoot = pathRoot[0];
+            window.location.href = `${pathRoot}/#${active_item.nextElementSibling.getAttribute('id')}`;
+
+            // window.location.href = `/#${active_item.nextElementSibling.getAttribute('id')}`;
         }
     }
 }
