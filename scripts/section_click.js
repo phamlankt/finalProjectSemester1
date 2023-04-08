@@ -30,8 +30,8 @@ function addCLassActive(classname, activename) {
 
         let pathRoot = window.location.pathname;
         pathRoot = pathRoot.split('/');
-        pathRoot = pathRoot[0];
-        window.location.href = `${pathRoot}/#${item.getAttribute('id')}`;
+        pathRoot = pathRoot[1];
+        window.location.href = `/${pathRoot}/#${item.getAttribute('id')}`;
 
 
         // window.location.href = `/#${item.getAttribute('id')}`;

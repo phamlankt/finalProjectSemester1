@@ -52,8 +52,8 @@ function displayPreviousSibling() {
 
             let pathRoot = window.location.pathname;
             pathRoot = pathRoot.split('/');
-            pathRoot = pathRoot[0];
-            window.location.href = `${pathRoot}/#${active_item.previousElementSibling.getAttribute('id')}`;
+            pathRoot = pathRoot[1];
+            window.location.href = `/${pathRoot}/#${active_item.previousElementSibling.getAttribute('id')}`;
         }
     }
 }
@@ -68,8 +68,8 @@ function displayNextSibling() {
 
             let pathRoot = window.location.pathname;
             pathRoot = pathRoot.split('/');
-            pathRoot = pathRoot[0];
-            window.location.href = `${pathRoot}/#${active_item.nextElementSibling.getAttribute('id')}`;
+            pathRoot = pathRoot[1];
+            window.location.href = `/${pathRoot}/#${active_item.nextElementSibling.getAttribute('id')}`;
         }
     }
 }
