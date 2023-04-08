@@ -240,7 +240,7 @@ main {
 }
 main #section_dot {
   position: fixed;
-  top: 50%;
+  top: 40%;
   margin-left: 5px;
   z-index: 1;
   list-style-type: none;
@@ -521,6 +521,48 @@ main #main_content section.pricing div .buy {
   background: rgba(0, 0, 0, 0.2);
   padding: 20px 0;
   font-weight: 700;
+  width: 100%;
+}
+main #main_content section.screenshots h2 {
+  display: block;
+}
+main #main_content section.screenshots div.instruction span {
+  display: block;
+  padding-bottom: 15px;
+}
+main #main_content section.screenshots div.instruction span::before {
+  color: red;
+  margin-right: 10px;
+  line-height: 21px;
+  font-weight: normal;
+}
+main #main_content section.screenshots #screenshots_controls {
+  list-style-type: none;
+  margin-left: -40px;
+}
+main #main_content section.screenshots #screenshots_controls .scr_active {
+  background-color: white;
+}
+main #main_content section.screenshots #screenshots_controls li {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+main #main_content .screenshot_imgs {
+  position: fixed;
+  top: 20%;
+  right: 15%;
+  left: auto;
+  margin-top: 75px;
+  margin-right: 90px;
+  display: none;
+  transition: transform 350ms ease-in-out;
+  width: 232px;
+}
+main #main_content .screenshot_imgs div {
   width: 100%;
 }
 main #main_content section.download button {

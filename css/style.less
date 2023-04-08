@@ -61,7 +61,7 @@ main {
 
     #section_dot {
         position: fixed;
-        top: 50%;
+        top: 40%;
         margin-left: 5px;
         z-index: 1;
         list-style-type: none;
@@ -368,6 +368,7 @@ main {
                 display: flex;
                 transition: transform 350ms ease-in-out;
 
+
                 .default_client {
                     display: block;
                 }
@@ -496,6 +497,69 @@ main {
 
 
             // }
+        }
+
+        section.screenshots {
+            h2 {
+                display: block;
+            }
+
+            div.instruction {
+                span {
+                    display: block;
+                    padding-bottom: 15px;
+                }
+
+                span::before {
+                    color: red;
+                    margin-right: 10px;
+                    line-height: 21px;
+                    font-weight: normal;
+                }
+            }
+
+            #screenshots_controls {
+                list-style-type: none;
+                margin-left: -40px;
+
+                .scr_active {
+                    background-color: white;
+                }
+
+                li {
+                    display: inline-block;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 10px;
+
+                }
+            }
+        }
+
+
+        .screenshot_imgs {
+            position: fixed;
+            top: 20%;
+            right: 15%;
+            left: auto;
+            margin-top: 75px;
+            margin-right: 90px;
+
+
+            // display: flex;
+            display: none;
+            transition: transform 350ms ease-in-out;
+            width: 232px;
+            // overflow: hidden;
+
+            div {
+                width: 100%;
+
+            }
+
+
         }
 
         section.download {

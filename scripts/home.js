@@ -11,7 +11,6 @@ function addCLassActive(classname, activename) {
     // let classItems = document.getElementsByClassName(classname);
     let classItems = document.querySelectorAll('.' + classname);
     for (let item of classItems) {
-        console.log(item);
         item.classList.add(activename);
         // window.location.href = `/#${item.getAttribute('id')}`;
 

@@ -1,6 +1,6 @@
 // Section about
 let li_tags = document.querySelectorAll('section.about ul li.about_li');
-console.log(li_tags);
+// console.log(li_tags);
 for (let i = 0; i < li_tags.length; i++) {
     let li_tag = li_tags[i];
     li_tag.addEventListener('click', () => {
