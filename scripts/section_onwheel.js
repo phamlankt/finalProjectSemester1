@@ -43,7 +43,7 @@ window.addEventListener("wheel", event => {
 // })
 
 function displayPreviousSibling() {
-    active_items = document.getElementsByClassName('active');
+    let active_items = document.getElementsByClassName('active');
     for (let active_item of active_items) {
         if (active_item.previousElementSibling != null) {
             active_item.classList.remove('active');
@@ -54,7 +54,7 @@ function displayPreviousSibling() {
 }
 
 function displayNextSibling() {
-    active_items = document.getElementsByClassName('active');
+    let active_items = document.getElementsByClassName('active');
     for (let active_item of active_items) {
         if (active_item.nextElementSibling != null) {
             active_item.classList.remove('active');

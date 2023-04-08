@@ -85,10 +85,12 @@ main {
 
     #main_content {
         position: fixed;
-        top: 35%;
+        top: 30%;
         left: 23%;
         height: 100vh;
         overflow: hidden;
+        // padding-left: 8%;
+        // padding-top: 25%;
 
 
         // .active {
@@ -101,6 +103,8 @@ main {
             font-weight: 300;
             font-size: 15px;
             color: white;
+            padding-top: 40px;
+            // padding-left: 150px;
             // display: none;
             // display: flex;
             // align-items: center;
@@ -183,7 +187,7 @@ main {
                         span,
                         .tooltip_text::before {
                             color: #E02217;
-                            padding: 5px;
+                            // padding: 5px;
                             font-weight: normal;
                             line-height: 20px;
                         }
@@ -194,8 +198,8 @@ main {
 
                         .tooltip_text {
                             visibility: hidden;
-                            width: 355px;
-                            height: 60px;
+                            width: 300px;
+                            // height: 100px;
                             background: black;
                             opacity: 0.9;
                             color: #fff;
@@ -212,7 +216,8 @@ main {
 
                             .tooltip_bottom {
                                 position: absolute;
-                                bottom: -30px;
+                                display: block;
+                                bottom: -20px;
                                 left: 167px;
                                 width: 0px;
                                 height: 0px;
@@ -376,6 +381,11 @@ main {
         }
 
         section.contact {
+
+            // top: -20%;
+            // position: relative;
+            // padding-top: 250px;
+            // margin-left: 100px;
             ul {
                 list-style-type: none;
                 font-size: normal;
@@ -403,6 +413,7 @@ main {
                         position: relative;
                         border-bottom: 10px solid white;
                         width: 280px;
+                        // height: 250px;
                         position: absolute;
                         bottom: 100%;
                         margin: 15px 0;
@@ -435,10 +446,10 @@ main {
 
                         span.tooltip_arrow {
                             display: block;
-                            width: 10px;
-                            height: 10px;
+                            // width: 10px;
+                            // height: 10px;
                             position: absolute;
-                            bottom: -30px;
+                            bottom: -20px;
                             border-top: 10px solid white;
                             border-left: 10px solid transparent;
                             border-right: 10px solid transparent;
@@ -485,4 +496,159 @@ main {
         }
     }
 
+}
+
+
+
+// Responsive for different screen size
+@media (min-width: 1400px) {
+    main {
+        .phone_wrap {
+
+            #hand_phone {
+                position: fixed;
+                top: 20%;
+                right: 15%;
+                left: auto;
+            }
+
+            #phone_content {
+
+                position: fixed;
+                top: 20%;
+                right: 15%;
+                left: auto;
+                margin-top: 75px;
+                margin-right: 90px;
+
+                .active {
+                    display: block;
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 870px) and (max-width: 1400px) {
+    main {
+        .phone_wrap {
+            #hand_phone {
+                position: fixed;
+                top: 20%;
+                right: 0;
+                left: auto;
+            }
+
+            #phone_content {
+                position: fixed;
+                top: 20%;
+                right: 0;
+                left: auto;
+                margin-top: 75px;
+                margin-right: 90px;
+
+                .active {
+                    display: block;
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+        #main_content{
+            left: 13%;
+        }
+    }
+}
+
+
+
+@media (max-width: 870px) {
+    main {
+        .phone_wrap {
+            display: none;
+        }
+        #section_dot {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header {
+        left: 0%;
+        justify-content: space-between;
+        width: 100%;
+
+        .menu_wrapper {
+            margin-right: unset;
+        }
+
+        .header_logo {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+    main {
+        #section_dot {
+            display: none;
+        }
+
+        #main_content {
+            left: 15%;
+
+            section {
+                h2 {
+                    text-align: center;
+                }
+
+                button#download_btn {
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            section.about {
+                ul {
+                    font-size: 3vw;
+                }
+            }
+
+            section.contact {
+                ul {
+                    margin-right: 30px;
+                }
+
+                #submit_btn {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    #footer {
+        .footer_wrapper {
+            width: 100%;
+
+            .footer_menu {
+                display: none;
+            }
+
+            #social-icons {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-left: unset;
+            }
+        }
+    }
 }

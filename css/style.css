@@ -121,7 +121,7 @@
   main .phone_wrap #hand_phone {
     position: fixed;
     top: 20%;
-    right: 15%;
+    right: 0;
     left: auto;
   }
   main .phone_wrap #phone_content {
@@ -258,7 +258,7 @@ main #section_dot li {
 }
 main #main_content {
   position: fixed;
-  top: 35%;
+  top: 30%;
   left: 23%;
   height: 100vh;
   overflow: hidden;
@@ -269,6 +269,7 @@ main #main_content section {
   font-weight: 300;
   font-size: 15px;
   color: white;
+  padding-top: 40px;
   display: block;
   height: 100vh;
 }
@@ -328,7 +329,6 @@ main #main_content section.features ul li a {
 main #main_content section.features ul li a span,
 main #main_content section.features ul li a .tooltip_text::before {
   color: #E02217;
-  padding: 5px;
   font-weight: normal;
   line-height: 20px;
 }
@@ -337,8 +337,7 @@ main #main_content section.features ul li a .tooltip_text::before {
 }
 main #main_content section.features ul li a .tooltip_text {
   visibility: hidden;
-  width: 355px;
-  height: 60px;
+  width: 300px;
   background: black;
   opacity: 0.9;
   color: #fff;
@@ -354,7 +353,8 @@ main #main_content section.features ul li a .tooltip_text {
 }
 main #main_content section.features ul li a .tooltip_text .tooltip_bottom {
   position: absolute;
-  bottom: -30px;
+  display: block;
+  bottom: -20px;
   left: 167px;
   width: 0px;
   height: 0px;
@@ -517,10 +517,8 @@ main #main_content section.contact ul li div.tooltip_text p a:hover {
 }
 main #main_content section.contact ul li div.tooltip_text span.tooltip_arrow {
   display: block;
-  width: 10px;
-  height: 10px;
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   border-top: 10px solid white;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
@@ -553,4 +551,109 @@ main #main_content section.contact #contact_form textarea {
   width: 97%;
   height: 70px;
   resize: none;
+}
+@media (min-width: 1400px) {
+  main .phone_wrap #hand_phone {
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    left: auto;
+  }
+  main .phone_wrap #phone_content {
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    left: auto;
+    margin-top: 75px;
+    margin-right: 90px;
+  }
+  main .phone_wrap #phone_content .active {
+    display: block;
+  }
+  main .phone_wrap #phone_content img {
+    display: none;
+  }
+}
+@media (min-width: 870px) and (max-width: 1400px) {
+  main .phone_wrap #hand_phone {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    left: auto;
+  }
+  main .phone_wrap #phone_content {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    left: auto;
+    margin-top: 75px;
+    margin-right: 90px;
+  }
+  main .phone_wrap #phone_content .active {
+    display: block;
+  }
+  main .phone_wrap #phone_content img {
+    display: none;
+  }
+  main #main_content {
+    left: 13%;
+  }
+}
+@media (max-width: 870px) {
+  main .phone_wrap {
+    display: none;
+  }
+  main #section_dot {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  #header {
+    left: 0%;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #header .menu_wrapper {
+    margin-right: unset;
+  }
+  #header .header_logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main #section_dot {
+    display: none;
+  }
+  main #main_content {
+    left: 15%;
+  }
+  main #main_content section h2 {
+    text-align: center;
+  }
+  main #main_content section button#download_btn {
+    display: block;
+    margin: auto;
+  }
+  main #main_content section.about ul {
+    font-size: 3vw;
+  }
+  main #main_content section.contact ul {
+    margin-right: 30px;
+  }
+  main #main_content section.contact #submit_btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #footer .footer_wrapper {
+    width: 100%;
+  }
+  #footer .footer_wrapper .footer_menu {
+    display: none;
+  }
+  #footer .footer_wrapper #social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: unset;
+  }
 }
