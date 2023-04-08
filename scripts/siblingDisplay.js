@@ -9,7 +9,7 @@ function displayPreviousSibling() {
             let pathRoot = window.location.pathname;
             pathRoot = pathRoot.split('/');
             pathRoot = pathRoot[1];
-            window.location.href = `/${pathRoot}/#${active_item.previousElementSibling.getAttribute('id')}`;
+            window.location.href = `${pathRoot ? `/${pathRoot}` : ''}/#${active_item.previousElementSibling.getAttribute('id')}`;
         }
     }
 }
@@ -25,7 +25,7 @@ function displayNextSibling() {
             let pathRoot = window.location.pathname;
             pathRoot = pathRoot.split('/');
             pathRoot = pathRoot[1];
-            window.location.href = `/${pathRoot}/#${active_item.nextElementSibling.getAttribute('id')}`;
+            window.location.href = `${pathRoot ? `/${pathRoot}` : ''}/#${active_item.nextElementSibling.getAttribute('id')}`;
         }
     }
 }

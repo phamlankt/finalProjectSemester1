@@ -345,9 +345,8 @@ main #main_content section.features ul li a .tooltip_text {
   border-radius: 6px;
   padding: 5px;
   z-index: 1;
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
+  position: fixed;
+  left: 20%;
   margin: 0 0 10px -167px;
   border-bottom: 10px solid white;
 }
@@ -361,6 +360,20 @@ main #main_content section.features ul li a .tooltip_text .tooltip_bottom {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid white;
+}
+main #main_content section.features ul#features_gr1:nth-child(1) li a .tooltip_text {
+  bottom: 38%;
+}
+main #main_content section.features ul#features_gr1:nth-child(2) a .tooltip_text {
+  bottom: 36%;
+}
+main #main_content section.features ul#features_gr1:nth-child(3) a .tooltip_text {
+  bottom: 34%;
+}
+main #main_content section.features ul#features_gr2 li a .tooltip_text {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
 }
 main #main_content section.about ul {
   margin: 0;
@@ -448,6 +461,67 @@ main #main_content section.feedback #fb_client_controls li {
   width: 10px;
   height: 10px;
   margin-right: 10px;
+}
+main #main_content section.pricing h2 {
+  text-align: center;
+}
+main #main_content section.pricing div {
+  float: left;
+  width: 31%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  text-align: center;
+  margin-right: 2%;
+}
+main #main_content section.pricing div h3.package {
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-size: 22px;
+  padding: 20px 0;
+  margin: 0;
+  border-radius: 4px;
+}
+main #main_content section.pricing div h3.package:hover,
+main #main_content section.pricing div div.buy:hover {
+  background-color: red;
+}
+main #main_content section.pricing div h3.package:hover ~ div.buy,
+main #main_content section.pricing div div.buy:hover ~ h3.package {
+  background-color: red;
+}
+main #main_content section.pricing div div.price {
+  width: 100%;
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 25px;
+}
+main #main_content section.pricing div div.price span {
+  font-size: 21px;
+}
+main #main_content section.pricing div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+main #main_content section.pricing div ul li {
+  padding-bottom: 10px;
+}
+main #main_content section.pricing div ul li span {
+  font-weight: normal;
+}
+main #main_content section.pricing div ul li span::before {
+  color: red;
+  margin-right: 10px;
+  line-height: 21px;
+  font-weight: normal;
+}
+main #main_content section.pricing div .buy {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  font-weight: 700;
+  width: 100%;
 }
 main #main_content section.download button {
   padding-bottom: 10px;

@@ -164,6 +164,7 @@ main {
 
 
         section.features {
+
             ul {
                 margin-left: -50px;
                 float: left;
@@ -207,9 +208,13 @@ main {
                             border-radius: 6px;
                             padding: 5px;
                             z-index: 1;
-                            position: absolute;
-                            bottom: 100%;
-                            left: 50%;
+                            // position: absolute;
+                            // bottom: 100%;
+                            // left: 50%;
+
+                            position: fixed;
+                            // bottom: 38%;
+                            left: 20%;
 
                             margin: 0 0 10px -167px;
                             border-bottom: 10px solid white;
@@ -228,6 +233,53 @@ main {
 
                         }
 
+                    }
+                }
+            }
+
+            ul#features_gr1:nth-child(1) {
+                li {
+                    a {
+                        .tooltip_text {
+                            // position: fixed;
+                            bottom: 38%;
+                            // left: 25%;
+                        }
+                    }
+                }
+            }
+
+            ul#features_gr1:nth-child(2) {
+
+                a {
+                    .tooltip_text {
+                        // position: fixed;
+                        bottom: 36%;
+                        // left: 25%;
+                    }
+                }
+
+            }
+
+            ul#features_gr1:nth-child(3) {
+
+                a {
+                    .tooltip_text {
+                        // position: fixed;
+                        bottom: 34%;
+                        // left: 25%;
+                    }
+                }
+            }
+
+            ul#features_gr2 {
+                li {
+                    a {
+                        .tooltip_text {
+                            position: absolute;
+                            bottom: 100%;
+                            left: 50%;
+                        }
                     }
                 }
             }
@@ -357,6 +409,93 @@ main {
 
                 }
             }
+        }
+
+        section.pricing {
+
+            // #pricing_pkgs {
+            //     display: flex;
+            h2 {
+                text-align: center;
+            }
+
+            div {
+                float: left;
+                width: 31%;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 4px;
+                text-align: center;
+                margin-right: 2%;
+
+                h3.package {
+                    background: rgba(0, 0, 0, 0.2);
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                    font-size: 22px;
+                    padding: 20px 0;
+                    margin: 0;
+                    border-radius: 4px;
+
+                }
+
+                h3.package:hover,
+                div.buy:hover {
+                    background-color: red;
+
+                }
+
+                h3.package:hover~div.buy,
+                div.buy:hover~h3.package {
+                    background-color: red;
+
+                }
+
+                div.price {
+                    width: 100%;
+                    font-size: 28px;
+                    line-height: 32px;
+                    margin-bottom: 25px;
+
+                    span {
+                        font-size: 21px;
+                    }
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 25px;
+
+                    li {
+                        padding-bottom: 10px;
+
+                        span {
+                            // margin: 3px;
+                            font-weight: normal;
+
+                        }
+
+                        span::before {
+                            color: red;
+                            margin-right: 10px;
+                            line-height: 21px;
+                            font-weight: normal;
+                        }
+                    }
+
+                }
+
+                .buy {
+                    background: rgba(0, 0, 0, 0.2);
+                    padding: 20px 0;
+                    font-weight: 700;
+                    width: 100%;
+                }
+            }
+
+
+            // }
         }
 
         section.download {
@@ -560,7 +699,8 @@ main {
                 }
             }
         }
-        #main_content{
+
+        #main_content {
             left: 13%;
         }
     }
@@ -573,6 +713,7 @@ main {
         .phone_wrap {
             display: none;
         }
+
         #section_dot {
             display: none;
         }
