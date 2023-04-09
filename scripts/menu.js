@@ -32,6 +32,10 @@ function closemenu(x) {
 }
 // listen to event to open and close menu
 window.addEventListener('click', function (e) {
+    const currentActiveSection = document.querySelector("section.active");
+    if (!currentActiveSection.getAttribute('class').includes('screenshots')) {
+        document.querySelector('.wrapper_screenshot_imgs').style.display = 'none';
+    }
     if (document.getElementById('menu_wrapper').contains(e.target)) {
         openmenu();
 

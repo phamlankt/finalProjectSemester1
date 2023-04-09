@@ -29,10 +29,10 @@ const slider = document.querySelector('div.wrapper_screenshot_imgs');
 const changeSLide = () => {
     // const currentActiveSection = document.querySelector("section.active");
     // if (currentActiveSection) {
-    console.log(currentActiveSection);
+    // console.log(currentActiveSection);
 
     if (currentActiveSection.classList.contains('screenshots')) {
-        // document.querySelector('.wrapper_screenshot_imgs').style.display = 'flex';
+        document.querySelector('.wrapper_screenshot_imgs').style.display = 'flex';
         if (slider) {
             const widthTransform = Number(slider.offsetWidth);
 
@@ -53,7 +53,7 @@ const changeSLide = () => {
 
 for (let i = 0; i < screenshots.length; i++) {
     elNavs[i].onclick = () => {
-        // document.querySelector('.wrapper_screenshot_imgs').style.display = 'flex';
+        document.querySelector('.wrapper_screenshot_imgs').style.display = 'flex';
         for (let j = 0; j < screenshots.length; j++) {
             screenshots[j].classList.remove('scr_active');
             elNavs[j].classList.remove('scr_active');
