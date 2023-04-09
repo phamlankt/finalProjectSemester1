@@ -536,33 +536,35 @@ main {
 
                 }
             }
+
+            .screenshot_imgs {
+                position: fixed;
+                top: 20%;
+                right: 15%;
+                left: auto;
+                margin-top: 75px;
+                margin-right: 90px;
+                overflow: hidden;
+
+                div {
+                    width: 100%;
+
+                }
+
+                .wrapper_screenshot_imgs {
+                    display: flex;
+                    // display: none;
+                    flex-wrap: nowrap;
+                    transition: transform 350ms ease-in-out;
+                    width: 232px;
+                }
+
+
+            }
         }
 
 
-        .screenshot_imgs {
-            position: fixed;
-            top: 20%;
-            right: 15%;
-            left: auto;
-            margin-top: 75px;
-            margin-right: 90px;
-            overflow: hidden;
 
-            div {
-                width: 100%;
-
-            }
-
-            .wrapper_screenshot_imgs {
-                display: flex;
-                // display: none;
-                flex-wrap: nowrap;
-                transition: transform 350ms ease-in-out;
-                width: 232px;
-            }
-
-
-        }
 
         section.download {
             button {
@@ -768,6 +770,12 @@ main {
 
         #main_content {
             left: 13%;
+
+            section.screenshots {
+                .screenshot_imgs {
+                    right: 0;
+                }
+            }
         }
     }
 }
@@ -782,6 +790,11 @@ main {
 
         #section_dot {
             display: none;
+        }
+        section.screenshots {
+            .screenshot_imgs {
+                display: none;
+            }
         }
     }
 }

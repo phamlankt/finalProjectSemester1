@@ -551,7 +551,7 @@ main #main_content section.screenshots #screenshots_controls li {
   height: 10px;
   margin-right: 10px;
 }
-main #main_content .screenshot_imgs {
+main #main_content section.screenshots .screenshot_imgs {
   position: fixed;
   top: 20%;
   right: 15%;
@@ -560,10 +560,10 @@ main #main_content .screenshot_imgs {
   margin-right: 90px;
   overflow: hidden;
 }
-main #main_content .screenshot_imgs div {
+main #main_content section.screenshots .screenshot_imgs div {
   width: 100%;
 }
-main #main_content .screenshot_imgs .wrapper_screenshot_imgs {
+main #main_content section.screenshots .screenshot_imgs .wrapper_screenshot_imgs {
   display: flex;
   flex-wrap: nowrap;
   transition: transform 350ms ease-in-out;
@@ -718,12 +718,18 @@ main #main_content section.contact #contact_form textarea {
   main #main_content {
     left: 13%;
   }
+  main #main_content section.screenshots .screenshot_imgs {
+    right: 0;
+  }
 }
 @media (max-width: 870px) {
   main .phone_wrap {
     display: none;
   }
   main #section_dot {
+    display: none;
+  }
+  main section.screenshots .screenshot_imgs {
     display: none;
   }
 }
