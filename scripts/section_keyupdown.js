@@ -80,7 +80,7 @@ function displayPreviousScreenshot() {
 
     }
     let index_screenshot = Number(currentActiveScreenshots[1].getAttribute('id').replace('screenshot', ''));
-    console.log('index_screenshot:' + index_screenshot);
+
     if (index_screenshot == 1) {
         // slider.style.transform = `translateX(0px)`;
         const widthTransform = Number(slider.offsetWidth);
@@ -89,7 +89,6 @@ function displayPreviousScreenshot() {
     else {
 
         const widthTransform = Number(slider.offsetWidth);
-        console.log('widthTransform' + widthTransform);
         slider.style.transform = `translateX(-${(index_screenshot - 2) * (widthTransform)}px)`;
     }
 }
