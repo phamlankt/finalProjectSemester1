@@ -32,7 +32,9 @@ function displayPreviousSibling() {
 
 function displayNextSibling() {
     let active_items = document.getElementsByClassName('active');
+
     for (let active_item of active_items) {
+
         if (active_item.nextElementSibling != null) {
             active_item.classList.remove('active');
             active_item.nextElementSibling.classList.add('active');

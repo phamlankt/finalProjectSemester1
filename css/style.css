@@ -558,12 +558,16 @@ main #main_content .screenshot_imgs {
   left: auto;
   margin-top: 75px;
   margin-right: 90px;
-  display: none;
-  transition: transform 350ms ease-in-out;
-  width: 232px;
+  overflow: hidden;
 }
 main #main_content .screenshot_imgs div {
   width: 100%;
+}
+main #main_content .screenshot_imgs .wrapper_screenshot_imgs {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 350ms ease-in-out;
+  width: 232px;
 }
 main #main_content section.download button {
   padding-bottom: 10px;

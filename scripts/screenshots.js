@@ -24,13 +24,15 @@ const checkLastActive = () => {
     }
 }
 
-const slider = document.querySelector('div.screenshot_imgs');
+const slider = document.querySelector('div.wrapper_screenshot_imgs');
 
 const changeSLide = () => {
-    const currentActiveSection = document.querySelector("section.active");
-    // console.log(currentActiveSection);
+    // const currentActiveSection = document.querySelector("section.active");
+    // if (currentActiveSection) {
+    console.log(currentActiveSection);
+
     if (currentActiveSection.classList.contains('screenshots')) {
-        document.querySelector('.screenshot_imgs').style.display = 'flex';
+        // document.querySelector('.wrapper_screenshot_imgs').style.display = 'flex';
         if (slider) {
             const widthTransform = Number(slider.offsetWidth);
 
@@ -42,15 +44,16 @@ const changeSLide = () => {
             }
         }
     }
+    // }
 }
 
-let interval = setInterval(() => {
-    changeSLide()
-}, 3000);
+// let interval = setInterval(() => {
+//     changeSLide()
+// }, 3000);
 
 for (let i = 0; i < screenshots.length; i++) {
     elNavs[i].onclick = () => {
-        document.querySelector('.screenshot_imgs').style.display = 'flex';
+        // document.querySelector('.wrapper_screenshot_imgs').style.display = 'flex';
         for (let j = 0; j < screenshots.length; j++) {
             screenshots[j].classList.remove('scr_active');
             elNavs[j].classList.remove('scr_active');
@@ -60,13 +63,13 @@ for (let i = 0; i < screenshots.length; i++) {
         if (i == 0) slider.style.transform = `translateX(0px)`;
         else {
             const widthTransform = Number(slider.offsetWidth);
-            console.log(widthTransform);
+            // console.log(widthTransform);
             slider.style.transform = `translateX(-${i * (widthTransform)}px)`;
         }
 
-        clearInterval(interval);
-        interval = setInterval(() => {
-            changeSLide()
-        }, 3000)
+        // clearInterval(interval);
+        // interval = setInterval(() => {
+        //     changeSLide()
+        // }, 3000)
     }
 }
