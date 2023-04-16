@@ -652,7 +652,8 @@ main #main_content section.contact #contact_form {
   width: 100%;
 }
 main #main_content section.contact #contact_form input,
-main #main_content section.contact #contact_form textarea {
+main #main_content section.contact #contact_form textarea,
+main #main_content section.contact #contact_form div {
   float: left;
   width: 47%;
   border-radius: 4px;
@@ -667,10 +668,31 @@ main #main_content section.contact #contact_form textarea {
   font-size: 13px;
   font-weight: 300;
 }
+main #main_content section.contact #contact_form #name_warning,
+main #main_content section.contact #contact_form #email_warning,
+main #main_content section.contact #contact_form #message_warning {
+  color: transparent;
+  background: none;
+}
+main #main_content section.contact #contact_form #sending_result {
+  background: none;
+  width: 97%;
+  margin-left: 0;
+  margin-top: 10px;
+  padding-left: 0;
+  font-size: 20px;
+}
 main #main_content section.contact #contact_form textarea {
   width: 97%;
   height: 70px;
   resize: none;
+}
+main #main_content section.contact #contact_form #message_warning {
+  width: 97%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  padding-top: 5px;
 }
 @media (min-width: 1400px) {
   main .phone_wrap #hand_phone {

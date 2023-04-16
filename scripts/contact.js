@@ -2,6 +2,18 @@
 // Section Contact
 const contact_items = [
     {
+        element_type: 'div',
+
+        class: 'warning',
+        id: 'name_warning'
+    },
+    {
+        element_type: 'div',
+
+        class: 'warning',
+        id: 'email_warning'
+    },
+    {
         element_type: 'input',
         type: 'text',
         placeholder: 'Name',
@@ -34,10 +46,20 @@ const contact_items = [
         required: 'required'
     },
     {
+        element_type: 'div',
+        class: 'warning',
+        id: 'message_warning'
+    },
+    {
         element_type: 'button',
         type: 'submit',
         id: 'submit_btn',
         innerText: 'Send'
+    },
+    {
+        element_type: 'div',
+
+        id: 'sending_result'
     }
 ];
 
@@ -64,6 +86,15 @@ for (let item of contact_items) {
     document.getElementById('contact_form').appendChild(html_item);
 }
 
+
+let warning_items = document.querySelectorAll('.warning');
+
+for (const warning_item of warning_items) {
+    warning_item.style.display = 'block';
+    warning_item.innerHTML = "Please fill in the " + warning_item.getAttribute('id').split('_', 1);
+}
+
+
 function checkEmailValidity(email) {
     return String(email)
         .toLowerCase()
@@ -76,11 +107,17 @@ function checkRequired() {
     let return_code = true;
     for (let item of contact_items) {
         if (item['required']) {
-            console.log('require')
             let input_ctn = document.getElementById(item['id']).value;
             if (input_ctn == "") {
+                // let warning_items = document.querySelectorAll('.warning');
+
+                // for (const warning_item of warning_items) {
+                //     warning_item.style.display = 'block';
+                //     warning_item.innerHTML = "Please fill in the " + warning_item.getAttribute('id').split('_', 1);
+                // }
+                console.log(document.getElementById(item['id'] + '_warning'))
+                document.getElementById(item['id'] + '_warning').style.color = 'red';
                 return_code = false;
-                break;
             }
         }
     }
@@ -91,16 +128,32 @@ function checkRequired() {
 let input_email = document.getElementById('email');
 input_email.addEventListener('change', () => {
     let email_added = input_email.value;
-    if (!checkEmailValidity(email_added)) {
-        alert('Please insert a valid email address!')
+    console.log('email validity: ' + checkEmailValidity(email_added))
+    if (checkEmailValidity(email_added) == null) {
+        document.getElementById('email_warning').style.color = 'red'
     }
 })
 
 // Send email button - CLICK event
 document.getElementById('submit_btn').addEventListener('click', () => {
-    if (!checkRequired()) {
-        alert('Please fill in the required fields!')
-    } else {
-        alert('Thanks for contacting us! We will get back to you as soon as possible.')
+    document.getElementById('name_warning').style.color = "transparent";
+    document.getElementById('message_warning').style.color = "transparent";
+    document.getElementById('sending_result').innerHTML = '';
+    if (checkEmailValidity(document.getElementById('email').value) == null) {
+        document.getElementById('email_warning').style.color = "red";
+        document.getElementById('email_warning').innerHTML = 'Please insert a valid email address'
     }
+    else {
+        document.getElementById('email_warning').style.color = "transparent";
+    }
+    if (checkRequired() && checkEmailValidity(document.getElementById('email').value) != null) {
+        document.getElementById('sending_result').innerHTML = 'Thanks for contacting us! We will get back to you as soon as possible.';
+        let username = document.getElementById('name').value;
+        let email_address = document.getElementById('email').value;
+        let phone_nr = document.getElementById('phone').value;
+        localStorage.setItem("Name", username);
+        localStorage.setItem("Email", email_address);
+        localStorage.setItem("Phone Number", phone_nr);
+    }
+
 })

@@ -13,7 +13,8 @@ window.addEventListener("wheel", event => {
 })
 
 
-function displayPreviousSibling() {
+// function displayPreviousSibling() {
+const displayPreviousSibling = debounce(() => {
     let active_items = document.getElementsByClassName('active');
     for (let active_item of active_items) {
         if (active_item.previousElementSibling != null) {
@@ -30,9 +31,10 @@ function displayPreviousSibling() {
             window.location.href = `${pathRoot ? `/${pathRoot}` : ''}/#${active_item.previousElementSibling.getAttribute('id')}`;
         }
     }
-}
+});
 
-function displayNextSibling() {
+// function displayNextSibling() {
+const displayNextSibling = debounce(() => {
     let active_items = document.getElementsByClassName('active');
     for (let active_item of active_items) {
         if (active_item.nextElementSibling != null) {
@@ -47,5 +49,13 @@ function displayNextSibling() {
             pathRoot = pathRoot[1];
             window.location.href = `${pathRoot ? `/${pathRoot}` : ''}/#${active_item.nextElementSibling.getAttribute('id')}`;
         }
+    }
+});
+
+function debounce(func, delay = 500) {
+    let timer
+    return (...args) => {
+        clearTimeout(timer)
+        timer = setTimeout(() => func.apply(this, args), delay)
     }
 }

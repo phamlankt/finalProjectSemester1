@@ -678,7 +678,8 @@ main {
                 width: 100%;
 
                 input,
-                textarea {
+                textarea,
+                div {
                     float: left;
                     width: 47%;
                     border-radius: 4px;
@@ -694,11 +695,38 @@ main {
                     font-weight: 300;
                 }
 
+                #name_warning,
+                #email_warning,
+                #message_warning {
+                    // display: block;
+                    color: transparent;
+                    background: none;
+                }
+
+                #sending_result {
+                    background: none;
+                    width: 97%;
+                    margin-left: 0;
+                    margin-top: 10px;
+                    padding-left: 0;
+                    font-size: 20px;
+                }
+
                 textarea {
                     width: 97%;
                     height: 70px;
                     resize: none;
                 }
+
+                #message_warning {
+                    width: 97%;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    margin-top: 0;
+                    padding-top: 5px;
+
+                }
+
             }
         }
     }
@@ -791,6 +819,7 @@ main {
         #section_dot {
             display: none;
         }
+
         section.screenshots {
             .screenshot_imgs {
                 display: none;
