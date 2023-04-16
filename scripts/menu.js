@@ -48,12 +48,13 @@ window.addEventListener('click', function (e) {
 // listen on event to click on each menu item
 let menu_items = document.querySelectorAll('.menu_item');
 for (const menu_item of menu_items) {
-    menu_item.addEventListener('click', function () {
+    menu_item.addEventListener('click', function (e) {
         let menu_item_name = menu_item.getAttribute('id').slice(menu_item.getAttribute('id').indexOf('_') + 1);
         let active_items = document.getElementsByClassName('active');
         let current_active_item_name = active_items[1].getAttribute('id').slice(active_items[1].getAttribute('id').indexOf('_') + 1);
         removeCLassActive(current_active_item_name, "active");
         addCLassActive(menu_item_name, "active");
+        e.preventDefault();
 
     });
 
@@ -69,9 +70,10 @@ function addCLassActive(classname, activename) {
     let pathRoot = window.location.pathname;
     pathRoot = pathRoot.split('/');
     pathRoot = pathRoot[1];
-    alert(`${pathRoot ? `/${pathRoot}` : ''}/#${classname + '_ctn'}`)
-    console.log(`${pathRoot ? `/${pathRoot}` : ''}/#${classname + "_ctn"}`)
     window.location.href = `${pathRoot ? `/${pathRoot}` : ''}/#${classname + '_ctn'}`;
+    // window.location.replace(`${pathRoot ? `/${pathRoot}` : ''}/#${classname + '_ctn'}`);
+
+
 }
 
 
