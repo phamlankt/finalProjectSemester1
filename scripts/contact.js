@@ -3,13 +3,15 @@
 const contact_items = [
     {
         element_type: 'div',
-
+        id: 'sending_result'
+    },
+    {
+        element_type: 'div',
         class: 'warning',
         id: 'name_warning'
     },
     {
         element_type: 'div',
-
         class: 'warning',
         id: 'email_warning'
     },
@@ -55,12 +57,8 @@ const contact_items = [
         type: 'submit',
         id: 'submit_btn',
         innerText: 'Send'
-    },
-    {
-        element_type: 'div',
-
-        id: 'sending_result'
     }
+    
 ];
 
 

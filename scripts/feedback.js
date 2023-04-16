@@ -52,7 +52,7 @@ for (let i = 0; i < client_fbs.length; i++) {
         if (i == 0) slider.style.transform = `translateX(0px)`;
         else {
             const widthTransform = Number(slider.offsetWidth);
-            console.log(widthTransform);
+            // console.log(widthTransform);
             slider.style.transform = `translateX(-${i * (widthTransform)}px)`
         }
 

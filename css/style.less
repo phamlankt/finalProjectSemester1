@@ -61,7 +61,7 @@ main {
 
     #section_dot {
         position: fixed;
-        top: 40%;
+        top: 37%;
         margin-left: 5px;
         z-index: 1;
         list-style-type: none;
@@ -85,7 +85,7 @@ main {
 
     #main_content {
         position: fixed;
-        top: 30%;
+        top: 27%;
         left: 23%;
         height: 100vh;
         overflow: hidden;
@@ -696,20 +696,24 @@ main {
                 }
 
                 #name_warning,
-                #email_warning,
-                #message_warning {
+                #email_warning {
                     // display: block;
                     color: transparent;
                     background: none;
+                    margin: 0;
+                    padding: 0;
+                    padding-bottom: 5px;
                 }
 
                 #sending_result {
                     background: none;
                     width: 97%;
-                    margin-left: 0;
-                    margin-top: 10px;
-                    padding-left: 0;
-                    font-size: 20px;
+                    // margin-left: 0;
+                    margin: 0px;
+                    // padding-left: 0;
+                    padding: 0;
+                    font-size: 16px;
+                    color: aqua;
                 }
 
                 textarea {
@@ -720,6 +724,8 @@ main {
 
                 #message_warning {
                     width: 97%;
+                    color: transparent;
+                    background: none;
                     margin-bottom: 0;
                     padding-bottom: 0;
                     margin-top: 0;

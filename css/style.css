@@ -240,7 +240,7 @@ main {
 }
 main #section_dot {
   position: fixed;
-  top: 40%;
+  top: 37%;
   margin-left: 5px;
   z-index: 1;
   list-style-type: none;
@@ -258,7 +258,7 @@ main #section_dot li {
 }
 main #main_content {
   position: fixed;
-  top: 30%;
+  top: 27%;
   left: 23%;
   height: 100vh;
   overflow: hidden;
@@ -669,18 +669,20 @@ main #main_content section.contact #contact_form div {
   font-weight: 300;
 }
 main #main_content section.contact #contact_form #name_warning,
-main #main_content section.contact #contact_form #email_warning,
-main #main_content section.contact #contact_form #message_warning {
+main #main_content section.contact #contact_form #email_warning {
   color: transparent;
   background: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
 }
 main #main_content section.contact #contact_form #sending_result {
   background: none;
   width: 97%;
-  margin-left: 0;
-  margin-top: 10px;
-  padding-left: 0;
-  font-size: 20px;
+  margin: 0px;
+  padding: 0;
+  font-size: 16px;
+  color: aqua;
 }
 main #main_content section.contact #contact_form textarea {
   width: 97%;
@@ -689,6 +691,8 @@ main #main_content section.contact #contact_form textarea {
 }
 main #main_content section.contact #contact_form #message_warning {
   width: 97%;
+  color: transparent;
+  background: none;
   margin-bottom: 0;
   padding-bottom: 0;
   margin-top: 0;
