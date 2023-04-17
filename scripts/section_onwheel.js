@@ -52,7 +52,7 @@ const displayNextSibling = debounce(() => {
     }
 });
 
-function debounce(func, delay = 500) {
+function debounce(func, delay = 100) {
     let timer
     return (...args) => {
         clearTimeout(timer)

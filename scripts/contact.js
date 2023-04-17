@@ -58,7 +58,7 @@ const contact_items = [
         id: 'submit_btn',
         innerText: 'Send'
     }
-    
+
 ];
 
 
@@ -107,28 +107,35 @@ function checkRequired() {
         if (item['required']) {
             let input_ctn = document.getElementById(item['id']).value;
             if (input_ctn == "") {
-                // let warning_items = document.querySelectorAll('.warning');
-
-                // for (const warning_item of warning_items) {
-                //     warning_item.style.display = 'block';
-                //     warning_item.innerHTML = "Please fill in the " + warning_item.getAttribute('id').split('_', 1);
-                // }
-                console.log(document.getElementById(item['id'] + '_warning'))
                 document.getElementById(item['id'] + '_warning').style.color = 'red';
                 return_code = false;
+            } else {
+                if (document.getElementById(item['id'] + '_warning').style.color == 'red') {
+                    document.getElementById(item['id'] + '_warning').style.color = 'transparent';
+                }
             }
         }
     }
     return return_code;
 }
 
+// Validate name field
+let input_name = document.getElementById('name');
+input_name.addEventListener('change', () => {
+    let name_added = input_name.value;
+});
+
 // Validate email from input - ONCHANGE event
 let input_email = document.getElementById('email');
 input_email.addEventListener('change', () => {
     let email_added = input_email.value;
-    console.log('email validity: ' + checkEmailValidity(email_added))
     if (checkEmailValidity(email_added) == null) {
-        document.getElementById('email_warning').style.color = 'red'
+        document.getElementById('email_warning').style.color = 'red';
+        document.getElementById('email_warning').innerHTML = 'Please insert a valid email address';
+    } else {
+        if (document.getElementById('email_warning').style.color == 'red') {
+            document.getElementById('email_warning').style.color = 'transparent';
+        }
     }
 })
 
@@ -146,12 +153,24 @@ document.getElementById('submit_btn').addEventListener('click', () => {
     }
     if (checkRequired() && checkEmailValidity(document.getElementById('email').value) != null) {
         document.getElementById('sending_result').innerHTML = 'Thanks for contacting us! We will get back to you as soon as possible.';
+        document.getElementById('sending_result').style.color = "aqua";
         let username = document.getElementById('name').value;
         let email_address = document.getElementById('email').value;
         let phone_nr = document.getElementById('phone').value;
         localStorage.setItem("Name", username);
         localStorage.setItem("Email", email_address);
         localStorage.setItem("Phone Number", phone_nr);
+        setTimeout(clearForm, 10000);
     }
 
 })
+
+function clearForm() {
+    for (let item of contact_items) {
+        if (item['element_type'] == "div") {
+            document.getElementById(item['id']).style.color = "transparent";
+        } else if (item['element_type'] == "input" || item['element_type'] == "textarea") {
+            document.getElementById(item['id']).value = "";
+        }
+    }
+}
