@@ -408,8 +408,6 @@ main {
 
         section.pricing {
 
-            // #pricing_pkgs {
-            //     display: flex;
             h2 {
                 text-align: center;
             }
@@ -489,8 +487,12 @@ main {
                 }
             }
 
+            div:hover~div.buy,
+            div:hover~h3.package {
+                background-color: red;
 
-            // }
+            }
+
         }
 
         section.screenshots {
@@ -556,8 +558,6 @@ main {
 
             }
         }
-
-
 
 
         section.download {
@@ -702,9 +702,7 @@ main {
                 #sending_result {
                     background: none;
                     width: 97%;
-                    // margin-left: 0;
                     margin: 0px;
-                    // padding-left: 0;
                     padding: 0;
                     font-size: 16px;
                     color: aqua;
@@ -721,7 +719,7 @@ main {
                     color: transparent;
                     background: none;
                     margin-bottom: 0;
-                    padding-bottom: 0;
+                    padding-bottom: 10px;
                     margin-top: 0;
                     padding-top: 5px;
 
@@ -852,6 +850,7 @@ main {
 
         #main_content {
             left: 15%;
+            top: 18%;
 
             section {
                 h2 {
@@ -870,9 +869,27 @@ main {
                 }
             }
 
+            section.video {
+                iframe {
+                    max-width: 33vh;
+                }
+            }
+
+            section.pricing {
+                div {
+                    ul {
+                        li {
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
             section.contact {
                 ul {
-                    margin-right: 30px;
+                    margin-right: 20px;
                 }
 
                 #submit_btn {
@@ -881,6 +898,7 @@ main {
                     margin-right: auto;
                 }
             }
+
         }
     }
 

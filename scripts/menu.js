@@ -13,7 +13,7 @@ function openmenu(x) {
         document.getElementById("menu_bar_nav").style.display = "flex";
         document.getElementById("header").style.setProperty("left", "254px");
         document.getElementById("footer").style.setProperty("left", "15%");
-        document.getElementById("main_content").style.setProperty("left", "38%");
+        // document.getElementById("main_content").style.setProperty("left", "38%");
     }
 
 }

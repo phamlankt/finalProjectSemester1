@@ -523,6 +523,10 @@ main #main_content section.pricing div .buy {
   font-weight: 700;
   width: 100%;
 }
+main #main_content section.pricing div:hover ~ div.buy,
+main #main_content section.pricing div:hover ~ h3.package {
+  background-color: red;
+}
 main #main_content section.screenshots h2 {
   display: block;
 }
@@ -694,7 +698,7 @@ main #main_content section.contact #contact_form #message_warning {
   color: transparent;
   background: none;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 10px;
   margin-top: 0;
   padding-top: 5px;
 }
@@ -777,6 +781,7 @@ main #main_content section.contact #contact_form #message_warning {
   }
   main #main_content {
     left: 15%;
+    top: 18%;
   }
   main #main_content section h2 {
     text-align: center;
@@ -788,8 +793,14 @@ main #main_content section.contact #contact_form #message_warning {
   main #main_content section.about ul {
     font-size: 3vw;
   }
+  main #main_content section.video iframe {
+    max-width: 33vh;
+  }
+  main #main_content section.pricing div ul li span {
+    font-size: 12px;
+  }
   main #main_content section.contact ul {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   main #main_content section.contact #submit_btn {
     display: block;
