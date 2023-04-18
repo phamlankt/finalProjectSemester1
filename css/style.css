@@ -482,14 +482,6 @@ main #main_content section.pricing div h3.package {
   margin: 0;
   border-radius: 4px;
 }
-main #main_content section.pricing div h3.package:hover,
-main #main_content section.pricing div div.buy:hover {
-  background-color: red;
-}
-main #main_content section.pricing div h3.package:hover ~ div.buy,
-main #main_content section.pricing div div.buy:hover ~ h3.package {
-  background-color: red;
-}
 main #main_content section.pricing div div.price {
   width: 100%;
   font-size: 28px;
@@ -523,8 +515,10 @@ main #main_content section.pricing div .buy {
   font-weight: 700;
   width: 100%;
 }
-main #main_content section.pricing div:hover ~ div.buy,
-main #main_content section.pricing div:hover ~ h3.package {
+main #main_content section.pricing div:hover h3.package {
+  background-color: red;
+}
+main #main_content section.pricing div:hover div.buy {
   background-color: red;
 }
 main #main_content section.screenshots h2 {

@@ -431,17 +431,6 @@ main {
 
                 }
 
-                h3.package:hover,
-                div.buy:hover {
-                    background-color: red;
-
-                }
-
-                h3.package:hover~div.buy,
-                div.buy:hover~h3.package {
-                    background-color: red;
-
-                }
 
                 div.price {
                     width: 100%;
@@ -485,13 +474,16 @@ main {
                     font-weight: 700;
                     width: 100%;
                 }
+                              
             }
-
-            div:hover~div.buy,
-            div:hover~h3.package {
+            div:hover h3.package{
                 background-color: red;
-
             }
+            div:hover div.buy{
+                background-color: red;
+            }
+
+           
 
         }
 
