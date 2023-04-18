@@ -195,12 +195,12 @@ main {
 
                         .tooltip_text::before {
                             font-size: x-large;
+                            margin-right: 10px;
                         }
 
                         .tooltip_text {
                             visibility: hidden;
                             width: 300px;
-                            // height: 100px;
                             background: black;
                             opacity: 0.9;
                             color: #fff;
@@ -208,12 +208,7 @@ main {
                             border-radius: 6px;
                             padding: 5px;
                             z-index: 1;
-                            // position: absolute;
-                            // bottom: 100%;
-                            // left: 50%;
-
                             position: fixed;
-                            // bottom: 38%;
                             left: 20%;
 
                             margin: 0 0 10px -167px;
@@ -237,33 +232,20 @@ main {
                 }
             }
 
-            ul#features_gr1 li:nth-child(1) {
+            ul#features_gr1 li {
 
                 a {
                     .tooltip_text {
-                        bottom: 42%;
+                        position: absolute;
+                        bottom: 100%;
+                        margin: 0 0 10px 0px;
+
+                        .tooltip_bottom {
+                            left: 50px;
+                        }
                     }
                 }
 
-            }
-
-            ul#features_gr1 li:nth-child(2) {
-
-                a {
-                    .tooltip_text {
-                        bottom: 39%;
-                    }
-                }
-
-            }
-
-            ul#features_gr1 li:nth-child(3) {
-
-                a {
-                    .tooltip_text {
-                        bottom: 36%;
-                    }
-                }
             }
 
             ul#features_gr2 {
@@ -474,16 +456,18 @@ main {
                     font-weight: 700;
                     width: 100%;
                 }
-                              
+
             }
-            div:hover h3.package{
-                background-color: red;
-            }
-            div:hover div.buy{
+
+            div:hover h3.package {
                 background-color: red;
             }
 
-           
+            div:hover div.buy {
+                background-color: red;
+            }
+
+
 
         }
 
@@ -574,11 +558,6 @@ main {
         }
 
         section.contact {
-
-            // top: -20%;
-            // position: relative;
-            // padding-top: 250px;
-            // margin-left: 100px;
             ul {
                 list-style-type: none;
                 font-size: normal;

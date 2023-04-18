@@ -334,6 +334,7 @@ main #main_content section.features ul li a .tooltip_text::before {
 }
 main #main_content section.features ul li a .tooltip_text::before {
   font-size: x-large;
+  margin-right: 10px;
 }
 main #main_content section.features ul li a .tooltip_text {
   visibility: hidden;
@@ -361,14 +362,13 @@ main #main_content section.features ul li a .tooltip_text .tooltip_bottom {
   border-right: 10px solid transparent;
   border-top: 10px solid white;
 }
-main #main_content section.features ul#features_gr1 li:nth-child(1) a .tooltip_text {
-  bottom: 42%;
+main #main_content section.features ul#features_gr1 li a .tooltip_text {
+  position: absolute;
+  bottom: 100%;
+  margin: 0 0 10px 0px;
 }
-main #main_content section.features ul#features_gr1 li:nth-child(2) a .tooltip_text {
-  bottom: 39%;
-}
-main #main_content section.features ul#features_gr1 li:nth-child(3) a .tooltip_text {
-  bottom: 36%;
+main #main_content section.features ul#features_gr1 li a .tooltip_text .tooltip_bottom {
+  left: 50px;
 }
 main #main_content section.features ul#features_gr2 li a .tooltip_text {
   position: absolute;
