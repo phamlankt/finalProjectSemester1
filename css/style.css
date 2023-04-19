@@ -582,6 +582,9 @@ main #main_content section.download button .appstore {
 main #main_content section.download button .playstore {
   background: url('../images/playstore.png');
 }
+main #main_content section.contact {
+  padding-top: 50px;
+}
 main #main_content section.contact ul {
   list-style-type: none;
   font-size: normal;
@@ -643,6 +646,12 @@ main #main_content section.contact ul li div.tooltip_text span.tooltip_arrow {
 }
 main #main_content section.contact ul li:hover .tooltip_text {
   visibility: visible;
+}
+main #main_content section.contact ul#contact_gr1 li div.tooltip_text {
+  left: -70px !important;
+}
+main #main_content section.contact ul#contact_gr1 li div.tooltip_text span.tooltip_arrow {
+  left: 50px;
 }
 main #main_content section.contact #contact_form {
   float: left;
