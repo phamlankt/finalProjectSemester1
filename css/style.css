@@ -648,7 +648,7 @@ main #main_content section.contact ul li:hover .tooltip_text {
   visibility: visible;
 }
 main #main_content section.contact ul#contact_gr1 li div.tooltip_text {
-  left: -70px !important;
+  left: 0px;
 }
 main #main_content section.contact ul#contact_gr1 li div.tooltip_text span.tooltip_arrow {
   left: 50px;
